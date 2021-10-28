@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteBase /one-market/
+RewriteCond %{REQUEST_FILENAME}% !-f
+RewriteRule . index.php [L]
