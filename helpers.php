@@ -233,3 +233,23 @@ function capitalize($text)
 {
 	return mb_convert_case($text, MB_CASE_TITLE, 'UTF-8');
 }
+
+if(!function_exists('e')){
+	function e($string){
+		if($string){
+		return htmlspecialchars($string);
+}		   
+}	
+
+}
+
+
+if(!function_exists('get_input')){
+	function get_input($key){
+		
+		return !empty($_SESSION['input'][$key])
+			? e($_SESSION['input'][$key])
+			:null;
+		
+}		   
+}	

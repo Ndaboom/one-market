@@ -1,7 +1,6 @@
 <?php
 
-// require 'model/posts.php';
-//require 'model/owners.php';
+require('model/dashboard.php');
 
 function home_page()
 {
@@ -12,52 +11,49 @@ function home_page()
 		exit();
 	}
 
+	$operators = fetch_operators();
+	$categories = fetch_categories();
+	$top6products = fetch_top6_products(1);
+	$recent_products = fetch_products_limit(8);
+	
+	return [
+		'operators'=>$operators,
+		'categories'=>$categories,
+		'top6products'=>$top6products,
+		'recent_products'=>$recent_products,
+	];
+}
 
-	if (session_exists('role')) {
-		redirect(get_session('role') . '/home');
-		exit();
-	}
+function search_by_category_page(){
+	$operators = fetch_operators();
+	$categories = fetch_categories();
+	$top6products = fetch_top6_products(1);
+	$products = fetch_products_by_category($_GET['c_i']);
 	
-	$ret = [];
+	return [
+		'operators'=>$operators,
+		'categories'=>$categories,
+		'top6products'=>$top6products,
+		'products'=>$products
+	];
+}
+
+function product_page(){
+	$operators = fetch_operators();
+	$categories = fetch_categories();
+	$top6products = fetch_top6_products(1);
+	$current_product = fetch_product_details($_GET['p_i']);
+	$product_category = fetch_category_by_id($current_product['product_category']);
+	$recent_products = fetch_products_limit(20);
 	
-	if (is_method('POST')) {
-		$u_n = $_POST['username'];
-		$pass = sha1($_POST['password']);
-		
-		if ( ! ($user = login('Owners', $u_n, $pass))) {
-			$user = login('Users', $u_n, $pass);
-		}
-		
-		if ( ! $user) {
-			$ret['errors'] = true;
-		} else {
-			setcookie('username', $u_n, time() + 365*24*3600);
-			setcookie('password', $pass, time() + 365*24*3600);
-			$table = $user['role'];
-			setcookie('table', $table, time() + 365*24*3600);
-			if (array_key_exists('role', $user)) 
-			{
-				if ( ! (bool) $user['role']) {
-					$ret['errors'] = true;
-				} else {
-					// User is not an owner
-					set_session('user', $user);
-					set_session('role', $user['role']);
-					//Just to know where the user works
-					$entity_id = $user['entity_id'];
-					$_SESSION['user_entity_info'] = get_user_entity_info($table, $entity_id);
-					redirect($user['role'] . '/home');
-				}
-			} else {
-				set_session('owner', $user);
-				set_session('firm', find_firm_by_owner($user['id']));
-				set_session('role', 'owner');
-				redirect('owners/home');
-			}
-		}
-	}
-	
-	return $ret;
+	return [
+		'operators'=>$operators,
+		'categories'=>$categories,
+		'top6products'=>$top6products,
+		'current_product'=>$current_product,
+		'product_category'=>$product_category,
+		'recent_products'=>$recent_products
+	];
 }
 
 function connect_user($table, $username, $password)
@@ -97,9 +93,7 @@ function connect_user($table, $username, $password)
 	}
 
 }
-{
 
-}
 function sign_up_page()
 {
 	
@@ -119,47 +113,3 @@ function logout_page()
 	redirect('home');
 	exit();
 }
-
-
-// function add_category_page()
-// {
-	// if (is_method('POST')) {
-		// $errors = validate_errors([
-			// 'designation' => validate_str($_POST['designation']),
-			// 'critical_period' => validate_date($_POST['critical_period']),
-		// ]);
-		
-		// if ( ! $errors) {
-			// insert_category($_POST);
-			// create_msg('Catégorie inserée'); 
-			// redirect('?page=add_category');
-		// }
-	// }
-// }
-
-// function add_item_page()
-// {
-	// $categories = get_all_categories();
-	
-	// if ( ! $categories) {
-		// redirect('?page=add_category');
-	// }
-	
-	// if (is_method('POST')) {
-		// $errors = validate_errors([
-			// 'designation' => validate_str($_POST['designation']),
-			// 'critical_period' => validate_date($_POST['critical_period']),
-		// ]);
-		
-		// if ( ! $errors) {
-			// insert_article($_POST);
-			// create_msg('Article inseré'); 
-			// redirect('?page=add_item');
-		// }
-	// }
-	
-	// return [
-		// 'categories' => $categories,
-	// ];
-// }
-

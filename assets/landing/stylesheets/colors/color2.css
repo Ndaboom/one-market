@@ -1,0 +1,103 @@
+/**
+  * Color
+  * Border Color
+  * Background Color  
+*/
+
+/* Color
+-------------------------------------------------------------- */
+a:hover,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.sale,
+.count-down .square .text,
+ul.flat-infomation li.phone,
+.slider .slider-item .item-text .header-item h2,
+.mainnav ul.menu > li:hover > a,
+.submenu .cat-title, .submenu .show a,
+.mega-menu > ul.menu > li > a:hover .menu-title,
+.drop-menu > .one-third .cat-title,
+.drop-menu > .one-third .show a,
+.imagebox .box-bottom .compare-wishlist a:hover,
+.imagebox .box-content .product-name a:hover,
+.drop-menu > .one-third ul.banner li .banner-text .banner-title,
+ul.menu li.column-1 .submenu > li > a:hover,
+.box-cart .inner-box .dropdown-box > ul > li .info-product .price,
+.box-cart .inner-box .dropdown-box .total span.price,
+.box-cart .inner-box .dropdown-box .btn-cart a.view-cart,
+.search-suggestions .box-suggestions .title,
+.search-suggestions .box-cat .title 
+ {
+	color: #0153a6;
+}
+
+.today-deal a:hover {
+	color: #fff;
+}
+
+/* Border Color
+-------------------------------------------------------------- */
+.owl-theme .owl-dots .owl-dot.active span, 
+.owl-theme .owl-dots .owl-dot:hover span,
+.owl-theme .owl-dots .owl-dot.active span, 
+.owl-theme .owl-dots .owl-dot:hover span,
+.box-cart .inner-box > a:hover > div.icon-cart,
+.box-cart .inner-box ul.menu-compare-wishlist li a:hover,
+.box-cart .inner-box .dropdown-box .btn-cart a.view-cart {
+	border-color: #0153a6;
+}
+
+.mainnav ul.menu > li > a {
+	border-color: #fff;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+#form-email-footer:focus {
+	border-color: #0153a6;
+}
+
+/* Background Color
+-------------------------------------------------------------- */ 
+input[type="button"], 
+input[type="reset"], 
+input[type="submit"],
+.header-bottom,
+.imagebox.style3 .box-image.save span,
+.owl-theme .owl-dots .owl-dot.active span:after, 
+.owl-theme .owl-dots .owl-dot:hover span:after,
+.btn-shop a:before,
+.box-cart .inner-box .dropdown-box .btn-cart a.view-cart:before, 
+.box-cart .inner-box .dropdown-box .btn-cart a.check-out:before,
+.popup-newsletter .popup span
+ {
+	background-color: #0153a6;
+}
+
+.mega-menu > .btn-mega {
+	background-color: #00468d;
+}
+
+.slider .slider-item:before {
+	background-color: #acd5ff;
+}
+
+.slider-item.style2 .item-text .content-item .price .sale,
+.box-cart .inner-box > a > div.icon-cart span {
+	background-color: #f92400;
+}
+

@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><!--<![endif]-->
 
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="author" content="Sammy Ndabo" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<meta name="description" content="Multi-purpose Application assets/landing/assets page HTML5 template" />
-<title><?= isset($title)? $title . ' - ': '' ?>One Market</title>
-<base href="<?= $base ?>" />
-<link href="assets/landing/assets/assets/images/favicon/favicon.png" rel="icon" />
-
-<link rel="preconnect" href="https://fonts.gstatic.com/" />
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&amp;family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet" />
-
-<link href="assets/landing/assets/css/vendor.min.css" rel="stylesheet" />
-<link href="assets/landing/assets/css/style.css" rel="stylesheet" />
-
+	<!-- Basic Page Needs -->
+	<meta charset="UTF-8">
+	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+	<title>One Market </title>
+	<meta name="author" content="CreativeLayers">
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<base href="<?= $base ?>"/>
+	<!-- Boostrap style -->
+	<link rel="stylesheet" type="text/css" href="assets/landing/stylesheets/bootstrap.min.css">
+	<!-- Theme style -->
+	<link rel="stylesheet" type="text/css" href="assets/landing/stylesheets/style.css">
+	<!-- Reponsive -->
+	<link rel="stylesheet" type="text/css" href="assets/landing/stylesheets/responsive.css">
+	<link rel="shortcut icon" href="assets/landing/favicon/favicon.png">
+	<style>
+		#mainnav {
+		padding-left: 30px;
+		float: right;
+		}
+	</style>
 </head>
 	<?= $content  ?>
 </html>

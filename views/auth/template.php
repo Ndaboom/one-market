@@ -22,6 +22,13 @@
         <!-- icons -->
         <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 
+        <style>
+               .auth-fluid-right{
+                       background-image: url('assets/images/pexels-allan-so-2622170.jpg');
+                       background-repeat: no-repeat;     
+               }
+        </style>
+
 </head>					
         <?= $content ?>
  <!-- Vendor js -->

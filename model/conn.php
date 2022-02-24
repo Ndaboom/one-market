@@ -46,6 +46,31 @@ function login($table, $username, $password)
 	return $q->fetch(\PDO::FETCH_ASSOC);
 }
 
+function register($table, $fullname, $telephone, $birth_date, $emailadress, $password)
+{
+	global $db;
+	
+	$q=$db->prepare('INSERT INTO users(username,phone_number,birth_date,email,password)
+	                 VALUES(:username,:phone_number,:birth_date,:email,:password)');
+	$q->execute([
+	'username'=> $fullname,
+	'phone_number'=>$telephone,
+	'birth_date'=>$birth_date,
+	'email'=>$emailadress,
+	'password'=>$password
+	]);
+
+	$last_id = $db->lastInsertId();
+		
+	$sql = "SELECT * FROM $table WHERE id= :id";
+	$q = $db->prepare($sql);
+	$q->bindValue(':id', $last_id);
+	
+	$q->execute();
+		
+	return $q->fetch(\PDO::FETCH_ASSOC);
+}
+
 function get_firm_name($firm_id)
 {
 	global $db;
