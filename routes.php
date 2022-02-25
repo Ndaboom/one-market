@@ -4,7 +4,10 @@ return [
 	'home' => [
 		'home' => 'home',
 		'search_by_category' => 'search_by_category',
-		'product' => 'product'
+		'product' => 'product',
+		'fetch_cart_ajax' => 'fetch_cart_ajax',
+		'add_product_ajax' => 'add_product_ajax',
+		'remove_product_ajax' => 'remove_product_ajax',
 	],
 	'auth' => [
 		'sign_in' => 'sign_in',

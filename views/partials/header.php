@@ -86,7 +86,7 @@
 						<div class="col-md-3">
 							<div id="logo" class="logo">
 								<a href="index.html" title="">
-									<img src="assets/landing/images/logos/logo.png" alt="">
+									<!-- <img src="assets/landing/images/logos/logo.png" alt=""> -->
 								</a>
 							</div><!-- /#logo -->
 						</div><!-- /.col-md-3 -->
@@ -140,7 +140,7 @@
 														</div>
 														<div class="info-product">
 															<div class="name">
-																<a href="#" title=""><?= $product['product_name'] ?></a>
+																<a href="home/product?p_i=<?= $product['id'] ?>" title=""><?= $product['product_name'] ?></a>
 															</div>
 															<div class="price">
 																<span class="sale">
@@ -192,60 +192,8 @@
 										</li>
 									</ul><!-- /.menu-compare-wishlist -->
 								</div><!-- /.inner-box -->
-								<div class="inner-box">
-									<a href="#" title="">
-										<div class="icon-cart">
-											<img src="assets/landing/images/icons/cart.png" alt="">
-											<span>4</span>
-										</div>
-										<div class="price">
-											$0.00
-										</div>
-									</a>
-									<div class="dropdown-box">
-										<ul>
-											<li>
-												<div class="img-product">
-													<img src="assets/landing/images/product/other/img-cart-1.jpg" alt="">
-												</div>
-												<div class="info-product">
-													<div class="name">
-														Samsung - Galaxy S6 4G LTE <br />with 32GB Memory Cell Phone
-													</div>
-													<div class="price">
-														<span>1 x</span>
-														<span>$250.00</span>
-													</div>
-												</div>
-												<div class="clearfix"></div>
-												<span class="delete">x</span>
-											</li>
-											<li>
-												<div class="img-product">
-													<img src="assets/landing/images/product/other/img-cart-2.jpg" alt="">
-												</div>
-												<div class="info-product">
-													<div class="name">
-														Sennheiser - Over-the-Ear Headphone System - Black
-													</div>
-													<div class="price">
-														<span>1 x</span>
-														<span>$250.00</span>
-													</div>
-												</div>
-												<div class="clearfix"></div>
-												<span class="delete">x</span>
-											</li>
-										</ul>
-										<div class="total">
-											<span>Subtotal:</span>
-											<span class="price">$1,999.00</span>
-										</div>
-										<div class="btn-cart">
-											<a href="shop-cart.html" class="view-cart" title="">View Cart</a>
-											<a href="shop-checkout.html" class="check-out" title="">Checkout</a>
-										</div>
-									</div>
+								<div class="inner-box" id="cart_box">
+									
 								</div><!-- /.inner-box -->
 							</div><!-- /.box-cart -->
 						</div><!-- /.col-md-3 -->

@@ -25,4 +25,68 @@
 	</style>
 </head>
 	<?= $content  ?>
+	<script>
+		
+		// $.getJSON('https://api.ipgeolocation.io/ipgeo?apiKey=' + apiKey, function(data) {
+		// 	console.log(JSON.stringify(data, null, 2));
+		// 	fetch_client_cart(data.ip);
+		// });
+
+		$(document).on('click','.btn-add-cart', function(e){
+			e.preventDefault();
+			let user_ip = '';
+			let product_id = $(this).data('product_id');
+			let product_name = '';
+			//Get client ip
+			let apiKey = 'b0a1516e3569484aad283b6a51608633';
+			$.getJSON('https://api.ipgeolocation.io/ipgeo?apiKey=' + apiKey, function(data) {
+			console.log(JSON.stringify(data, null, 2));
+			user_ip = data.ip;
+
+			$.ajax({
+            url:"home/add_product_ajax",
+            method:"POST",
+			data:{user_ip:user_ip,product_id:product_id},
+            success:function(data){
+				alert('Produit ajouté');
+				fetch_client_cart(user_ip);
+            }
+          	})
+			});
+		});
+
+		//Remove product from cart
+		$(document).on('click','.remove_from_cart', function(e){
+			e.preventDefault();
+			let user_ip = '';
+			let order_id = $(this).data('order_id');
+			//Get client ip
+			let apiKey = 'b0a1516e3569484aad283b6a51608633';
+			$.getJSON('https://api.ipgeolocation.io/ipgeo?apiKey=' + apiKey, function(data) {
+			console.log(JSON.stringify(data, null, 2));
+			user_ip = data.ip;
+
+			$.ajax({
+            url:"home/remove_product_ajax",
+            method:"POST",
+			data:{order_id:order_id},
+            success:function(data){
+				fetch_client_cart(user_ip);
+            }
+          	})
+			});
+		});
+
+		//Client cart
+		function fetch_client_cart(client_ip){
+			$.ajax({
+            url:"home/fetch_cart_ajax",
+            method:"POST",
+			data:{client_ip:client_ip},
+            success:function(data){
+              $('#cart_box').html(data);
+            }
+          	})
+		}
+	</script>
 </html>

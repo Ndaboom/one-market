@@ -387,3 +387,52 @@ function fetch_products_limit($limit){
 	$data = $result->fetchAll(PDO::FETCH_ASSOC);
 	return $data;
 }
+
+//Fetch most viewed products with custom limit
+function fetch_most_viewed_products($status, $limit){
+	global $db;
+	$query = "SELECT * FROM products_tb WHERE product_status= :status 
+			  ORDER BY product_views DESC LIMIT ".$limit."";
+	$result = $db->prepare($query);
+	$result->execute(['status' => $status]);
+	$data = $result->fetchAll(PDO::FETCH_ASSOC);
+	return $data;
+}
+
+//Fetch most saled products with custom limit
+function fetch_most_saled_products($status, $limit){
+	global $db;
+	$query = "SELECT * FROM products_tb WHERE product_status= :status 
+			  ORDER BY product_sales DESC LIMIT ".$limit."";
+	$result = $db->prepare($query);
+	$result->execute(['status' => $status]);
+	$data = $result->fetchAll(PDO::FETCH_ASSOC);
+	return $data;
+}
+
+function insert_to_cart($product_id,$user_ip){
+	global $db;
+	$q = $db->prepare('INSERT INTO cart_tb(product_id,client_ip)
+						  VALUES(:product_id, :client_ip)');
+	$q->execute([
+	'product_id' => $product_id,
+	'client_ip' =>$user_ip
+	]);
+}
+
+function remove_to_cart($order_id){
+	global $db;
+	$q = $db->prepare('DELETE FROM cart_tb WHERE id= :id');
+	$q->execute([
+	'id' => $order_id,
+	]);
+}
+
+function fetch_client_cart($client_ip){
+	global $db;
+	$query = "SELECT * FROM cart_tb WHERE client_ip= :client_ip";
+	$result = $db->prepare($query);
+	$result->execute(['client_ip' => $client_ip]);
+	$data = $result->fetchAll(PDO::FETCH_ASSOC);
+	return $data;
+}

@@ -5,7 +5,7 @@
 						<div class="widget-ft widget-about">
 							<div class="logo logo-ft">
 								<a href="index.html" title="">
-									<img src="assets/landing/images/logos/logo-ft.png" alt="">
+									<!-- <img src="assets/landing/images/logos/logo-ft.png" alt=""> -->
 								</a>
 							</div><!-- /.logo-ft -->
 							<div class="widget-content">
@@ -13,10 +13,10 @@
 									<img src="assets/landing/images/icons/call.png" alt="">
 								</div>
 								<div class="info">
-									<p class="questions">Got Questions ? Call us 24/7!</p>
-									<p class="phone">Call Us: (888) 1234 56789</p>
+									<p class="questions">Question ? Appelez nous 24/7!</p>
+									<p class="phone">Appelez nous: (243) 973 886 132</p>
 									<p class="address">
-										PO Box CT16122 Collins Street West, Victoria 8007,<br />Australia.
+										PO Box CT16122 Collins Street West, Victoria 8007,<br /> DRC.
 									</p>
 								</div>
 							</div><!-- /.widget-content -->
