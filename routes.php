@@ -8,6 +8,7 @@ return [
 		'fetch_cart_ajax' => 'fetch_cart_ajax',
 		'add_product_ajax' => 'add_product_ajax',
 		'remove_product_ajax' => 'remove_product_ajax',
+		'compare' => 'compare',
 	],
 	'auth' => [
 		'sign_in' => 'sign_in',

@@ -242,7 +242,7 @@
 											</a>
 										</div>
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $newer_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -296,7 +296,7 @@
 											</a>
 										</div>
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $newer_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -350,7 +350,7 @@
 											</a>
 										</div>
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $newer_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -404,7 +404,7 @@
 											</a>
 										</div>
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $newer_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -431,12 +431,12 @@
 											</a>
 										</li>
 										<li>
-											<a href="home/product?p_i=<?= $most_viewed['id'] ?>" title="">
+											<a href="home/product?p_i=<?= $mviewed_product['id'] ?>" title="">
 												<img src="<?= $mviewed_product['product_image'] ?>" alt="">
 											</a>
 										</li>
 										<li>
-											<a href="home/product?p_i=<?= $most_viewed['id'] ?>" title="">
+											<a href="home/product?p_i=<?= $mviewed_product['id'] ?>" title="">
 												<img src="<?= $mviewed_product['product_image'] ?>" alt="">
 											</a>
 										</li>
@@ -446,7 +446,7 @@
 											<a href="home/search_by_category?category=<?= $product_category['designation'] ?>&c_i=<?= $product_category['id'] ?>" title=""><?= $product_category['designation'] ?></a>
 										</div>
 										<div class="product-name">
-											<a href="home/product?p_i=<?= $most_viewed['id'] ?>" title=""><?= $mviewed_product['product_name'] ?></a>
+											<a href="home/product?p_i=<?= $mviewed_product['id'] ?>" title=""><?= $mviewed_product['product_name'] ?></a>
 										</div>
 										<div class="price">
 											<span class="sale">$<?= $mviewed_product['product_price'] ?></span>
@@ -460,7 +460,7 @@
 											</a>
 										</div>
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $mviewed_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -485,12 +485,12 @@
 											</a>
 										</li>
 										<li>
-											<a href="home/product?p_i=<?= $most_viewed['id'] ?>" title="">
+											<a href="home/product?p_i=<?= $mviewed_product['id'] ?>" title="">
 												<img src="<?= $mviewed_product['product_image'] ?>" alt="">
 											</a>
 										</li>
 										<li>
-											<a href="home/product?p_i=<?= $most_viewed['id'] ?>" title="">
+											<a href="home/product?p_i=<?= $mviewed_product['id'] ?>" title="">
 												<img src="<?= $mviewed_product['product_image'] ?>" alt="">
 											</a>
 										</li>
@@ -500,7 +500,7 @@
 											<a href="home/search_by_category?category=<?= $product_category['designation'] ?>&c_i=<?= $product_category['id'] ?>" title=""><?= $product_category['designation'] ?></a>
 										</div>
 										<div class="product-name">
-											<a href="home/product?p_i=<?= $most_viewed['id'] ?>" title=""><?= $mviewed_product['product_name'] ?></a>
+											<a href="home/product?p_i=<?= $mviewed_product['id'] ?>" title=""><?= $mviewed_product['product_name'] ?></a>
 										</div>
 										<div class="price">
 											<span class="sale">$<?= $mviewed_product['product_price'] ?></span>
@@ -514,7 +514,7 @@
 											</a>
 										</div>
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $mviewed_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -534,12 +534,12 @@
 									<span class="item-sale">TOP</span>
 									 <ul class="box-image owl-carousel-1">
 										<li>
-											<a href="home/product?p_i=<?= $most_viewed['id'] ?>" title="">
+											<a href="home/product?p_i=<?= $mviewed_product['id'] ?>" title="">
 												<img src="<?= $mviewed_product['product_image'] ?>" alt="">
 											</a>
 										</li>
 										<li>
-											<a href="home/product?p_i=<?= $most_viewed['id'] ?>" title="">
+											<a href="home/product?p_i=<?= $mviewed_product['id'] ?>" title="">
 												<img src="<?= $mviewed_product['product_image'] ?>" alt="">
 											</a>
 										</li>
@@ -554,7 +554,7 @@
 											<a href="home/search_by_category?category=<?= $product_category['designation'] ?>&c_i=<?= $product_category['id'] ?>" title=""><?= $product_category['designation'] ?></a>
 										</div>
 										<div class="product-name">
-											<a href="home/product?p_i=<?= $most_viewed['id'] ?>" title=""><?= $mviewed_product['product_name'] ?></a>
+											<a href="home/product?p_i=<?= $mviewed_product['id'] ?>" title=""><?= $mviewed_product['product_name'] ?></a>
 										</div>
 										<div class="price">
 											<span class="sale">$<?= $mviewed_product['product_price'] ?></span>
@@ -568,7 +568,7 @@
 											</a>
 										</div>
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $mviewed_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -593,12 +593,12 @@
 											</a>
 										</li>
 										<li>
-											<a href="home/product?p_i=<?= $most_viewed['id'] ?>" title="">
+											<a href="home/product?p_i=<?= $mviewed_product['id'] ?>" title="">
 												<img src="<?= $mviewed_product['product_image'] ?>" alt="">
 											</a>
 										</li>
 										<li>
-											<a href="home/product?p_i=<?= $most_viewed['id'] ?>" title="">
+											<a href="home/product?p_i=<?= $mviewed_product['id'] ?>" title="">
 												<img src="<?= $mviewed_product['product_image'] ?>" alt="">
 											</a>
 										</li>
@@ -608,7 +608,7 @@
 											<a href="home/search_by_category?category=<?= $product_category['designation'] ?>&c_i=<?= $product_category['id'] ?>" title=""><?= $product_category['designation'] ?></a>
 										</div>
 										<div class="product-name">
-											<a href="home/product?p_i=<?= $most_viewed['id'] ?>" title=""><?= $mviewed_product['product_name'] ?></a>
+											<a href="home/product?p_i=<?= $mviewed_product['id'] ?>" title=""><?= $mviewed_product['product_name'] ?></a>
 										</div>
 										<div class="price">
 											<span class="sale">$<?= $mviewed_product['product_price'] ?></span>
@@ -622,7 +622,7 @@
 											</a>
 										</div>
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $mviewed_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -678,7 +678,7 @@
 											</a>
 										</div>
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $most_saled_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -732,7 +732,7 @@
 											</a>
 										</div>
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $most_saled_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -786,7 +786,7 @@
 											</a>
 										</div>
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $most_saled_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -840,7 +840,7 @@
 											</a>
 										</div>
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $most_saled_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -874,16 +874,16 @@
 							<div class="product-box style1">
 								<div class="imagebox style1">
 									<div class="box-image">
-										<a href="#" title="">
+										<a href="home/product?p_i=<?= $our_product['id'] ?>" title="">
 											<img src="<?= $our_product['product_image'] ?>" alt="">
 										</a>
 									</div><!-- /.box-image -->
 									<div class="box-content">
 										<div class="cat-name">
-											<a href="#" title=""><?= $product_category['designation'] ?></a>
+											<a href="home/search_by_category?category=<?= $product_category['designation'] ?>&c_i=<?= $product_category['id'] ?>" title=""><?= $product_category['designation'] ?></a>
 										</div>
 										<div class="product-name">
-											<a href="#" title=""><?= $our_product['product_name'] ?></a>
+											<a href="home/product?p_i=<?= $our_product['id'] ?>" title=""><?= $our_product['product_name'] ?></a>
 										</div>
 										<div class="price">
 											<span class="regular"><?= $our_product['product_price'] ?></span>
@@ -892,7 +892,7 @@
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $our_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -912,19 +912,19 @@
 						<div class="owl-carousel-item">
 						<?php foreach(array_slice($our_products , 2, 2) as $our_product): ?>
 								<?php $product_category = fetch_category_by_id($our_product['product_category']); ?>
-							<div class="product-box style1">
+								<div class="product-box style1">
 								<div class="imagebox style1">
 									<div class="box-image">
-										<a href="#" title="">
+										<a href="home/product?p_i=<?= $our_product['id'] ?>" title="">
 											<img src="<?= $our_product['product_image'] ?>" alt="">
 										</a>
 									</div><!-- /.box-image -->
 									<div class="box-content">
 										<div class="cat-name">
-											<a href="#" title=""><?= $product_category['designation'] ?></a>
+											<a href="home/search_by_category?category=<?= $product_category['designation'] ?>&c_i=<?= $product_category['id'] ?>" title=""><?= $product_category['designation'] ?></a>
 										</div>
 										<div class="product-name">
-											<a href="#" title=""><?= $our_product['product_name'] ?></a>
+											<a href="home/product?p_i=<?= $our_product['id'] ?>" title=""><?= $our_product['product_name'] ?></a>
 										</div>
 										<div class="price">
 											<span class="regular"><?= $our_product['product_price'] ?></span>
@@ -933,7 +933,7 @@
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $our_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -953,19 +953,19 @@
 						<div class="owl-carousel-item">
 						<?php foreach(array_slice($our_products , 4, 2) as $our_product): ?>
 								<?php $product_category = fetch_category_by_id($our_product['product_category']); ?>
-							<div class="product-box style1">
+								<div class="product-box style1">
 								<div class="imagebox style1">
 									<div class="box-image">
-										<a href="#" title="">
+										<a href="home/product?p_i=<?= $our_product['id'] ?>" title="">
 											<img src="<?= $our_product['product_image'] ?>" alt="">
 										</a>
 									</div><!-- /.box-image -->
 									<div class="box-content">
 										<div class="cat-name">
-											<a href="#" title=""><?= $product_category['designation'] ?></a>
+											<a href="home/search_by_category?category=<?= $product_category['designation'] ?>&c_i=<?= $product_category['id'] ?>" title=""><?= $product_category['designation'] ?></a>
 										</div>
 										<div class="product-name">
-											<a href="#" title=""><?= $our_product['product_name'] ?></a>
+											<a href="home/product?p_i=<?= $our_product['id'] ?>" title=""><?= $our_product['product_name'] ?></a>
 										</div>
 										<div class="price">
 											<span class="regular"><?= $our_product['product_price'] ?></span>
@@ -974,7 +974,7 @@
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $our_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -994,19 +994,19 @@
 						<div class="owl-carousel-item">
 						<?php foreach(array_slice($our_products , 6, 2) as $our_product): ?>
 								<?php $product_category = fetch_category_by_id($our_product['product_category']); ?>
-							<div class="product-box style1">
+								<div class="product-box style1">
 								<div class="imagebox style1">
 									<div class="box-image">
-										<a href="#" title="">
+										<a href="home/product?p_i=<?= $our_product['id'] ?>" title="">
 											<img src="<?= $our_product['product_image'] ?>" alt="">
 										</a>
 									</div><!-- /.box-image -->
 									<div class="box-content">
 										<div class="cat-name">
-											<a href="#" title=""><?= $product_category['designation'] ?></a>
+											<a href="home/search_by_category?category=<?= $product_category['designation'] ?>&c_i=<?= $product_category['id'] ?>" title=""><?= $product_category['designation'] ?></a>
 										</div>
 										<div class="product-name">
-											<a href="#" title=""><?= $our_product['product_name'] ?></a>
+											<a href="home/product?p_i=<?= $our_product['id'] ?>" title=""><?= $our_product['product_name'] ?></a>
 										</div>
 										<div class="price">
 											<span class="regular"><?= $our_product['product_price'] ?></span>
@@ -1015,7 +1015,7 @@
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $our_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -1035,19 +1035,19 @@
 						<div class="owl-carousel-item">
 						<?php foreach(array_slice($our_products , 8, 2) as $our_product): ?>
 								<?php $product_category = fetch_category_by_id($our_product['product_category']); ?>
-							<div class="product-box style1">
+								<div class="product-box style1">
 								<div class="imagebox style1">
 									<div class="box-image">
-										<a href="#" title="">
+										<a href="home/product?p_i=<?= $our_product['id'] ?>" title="">
 											<img src="<?= $our_product['product_image'] ?>" alt="">
 										</a>
 									</div><!-- /.box-image -->
 									<div class="box-content">
 										<div class="cat-name">
-											<a href="#" title=""><?= $product_category['designation'] ?></a>
+											<a href="home/search_by_category?category=<?= $product_category['designation'] ?>&c_i=<?= $product_category['id'] ?>" title=""><?= $product_category['designation'] ?></a>
 										</div>
 										<div class="product-name">
-											<a href="#" title=""><?= $our_product['product_name'] ?></a>
+											<a href="home/product?p_i=<?= $our_product['id'] ?>" title=""><?= $our_product['product_name'] ?></a>
 										</div>
 										<div class="price">
 											<span class="regular"><?= $our_product['product_price'] ?></span>
@@ -1056,7 +1056,7 @@
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $our_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -1076,19 +1076,19 @@
 						<div class="owl-carousel-item">
 						<?php foreach(array_slice($our_products , 10, 2) as $our_product): ?>
 								<?php $product_category = fetch_category_by_id($our_product['product_category']); ?>
-							<div class="product-box style1">
+								<div class="product-box style1">
 								<div class="imagebox style1">
 									<div class="box-image">
-										<a href="#" title="">
+										<a href="home/product?p_i=<?= $our_product['id'] ?>" title="">
 											<img src="<?= $our_product['product_image'] ?>" alt="">
 										</a>
 									</div><!-- /.box-image -->
 									<div class="box-content">
 										<div class="cat-name">
-											<a href="#" title=""><?= $product_category['designation'] ?></a>
+											<a href="home/search_by_category?category=<?= $product_category['designation'] ?>&c_i=<?= $product_category['id'] ?>" title=""><?= $product_category['designation'] ?></a>
 										</div>
 										<div class="product-name">
-											<a href="#" title=""><?= $our_product['product_name'] ?></a>
+											<a href="home/product?p_i=<?= $our_product['id'] ?>" title=""><?= $our_product['product_name'] ?></a>
 										</div>
 										<div class="price">
 											<span class="regular"><?= $our_product['product_price'] ?></span>
@@ -1097,7 +1097,7 @@
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $our_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -1117,19 +1117,19 @@
 						<div class="owl-carousel-item">
 						<?php foreach(array_slice($our_products , 12, 2) as $our_product): ?>
 								<?php $product_category = fetch_category_by_id($our_product['product_category']); ?>
-							<div class="product-box style1">
+								<div class="product-box style1">
 								<div class="imagebox style1">
 									<div class="box-image">
-										<a href="#" title="">
+										<a href="home/product?p_i=<?= $our_product['id'] ?>" title="">
 											<img src="<?= $our_product['product_image'] ?>" alt="">
 										</a>
 									</div><!-- /.box-image -->
 									<div class="box-content">
 										<div class="cat-name">
-											<a href="#" title=""><?= $product_category['designation'] ?></a>
+											<a href="home/search_by_category?category=<?= $product_category['designation'] ?>&c_i=<?= $product_category['id'] ?>" title=""><?= $product_category['designation'] ?></a>
 										</div>
 										<div class="product-name">
-											<a href="#" title=""><?= $our_product['product_name'] ?></a>
+											<a href="home/product?p_i=<?= $our_product['id'] ?>" title=""><?= $our_product['product_name'] ?></a>
 										</div>
 										<div class="price">
 											<span class="regular"><?= $our_product['product_price'] ?></span>
@@ -1138,7 +1138,7 @@
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $our_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -1158,19 +1158,19 @@
 						<div class="owl-carousel-item">
 						<?php foreach(array_slice($our_products , 14, 2) as $our_product): ?>
 								<?php $product_category = fetch_category_by_id($our_product['product_category']); ?>
-							<div class="product-box style1">
+								<div class="product-box style1">
 								<div class="imagebox style1">
 									<div class="box-image">
-										<a href="#" title="">
+										<a href="home/product?p_i=<?= $our_product['id'] ?>" title="">
 											<img src="<?= $our_product['product_image'] ?>" alt="">
 										</a>
 									</div><!-- /.box-image -->
 									<div class="box-content">
 										<div class="cat-name">
-											<a href="#" title=""><?= $product_category['designation'] ?></a>
+											<a href="home/search_by_category?category=<?= $product_category['designation'] ?>&c_i=<?= $product_category['id'] ?>" title=""><?= $product_category['designation'] ?></a>
 										</div>
 										<div class="product-name">
-											<a href="#" title=""><?= $our_product['product_name'] ?></a>
+											<a href="home/product?p_i=<?= $our_product['id'] ?>" title=""><?= $our_product['product_name'] ?></a>
 										</div>
 										<div class="price">
 											<span class="regular"><?= $our_product['product_price'] ?></span>
@@ -1179,7 +1179,7 @@
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $our_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -1199,19 +1199,19 @@
 						<div class="owl-carousel-item">
 						<?php foreach(array_slice($our_products , 16, 2) as $our_product): ?>
 								<?php $product_category = fetch_category_by_id($our_product['product_category']); ?>
-							<div class="product-box style1">
+								<div class="product-box style1">
 								<div class="imagebox style1">
 									<div class="box-image">
-										<a href="#" title="">
+										<a href="home/product?p_i=<?= $our_product['id'] ?>" title="">
 											<img src="<?= $our_product['product_image'] ?>" alt="">
 										</a>
 									</div><!-- /.box-image -->
 									<div class="box-content">
 										<div class="cat-name">
-											<a href="#" title=""><?= $product_category['designation'] ?></a>
+											<a href="home/search_by_category?category=<?= $product_category['designation'] ?>&c_i=<?= $product_category['id'] ?>" title=""><?= $product_category['designation'] ?></a>
 										</div>
 										<div class="product-name">
-											<a href="#" title=""><?= $our_product['product_name'] ?></a>
+											<a href="home/product?p_i=<?= $our_product['id'] ?>" title=""><?= $our_product['product_name'] ?></a>
 										</div>
 										<div class="price">
 											<span class="regular"><?= $our_product['product_price'] ?></span>
@@ -1220,7 +1220,7 @@
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $our_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -1240,19 +1240,19 @@
 						<div class="owl-carousel-item">
 						<?php foreach(array_slice($our_products , 18, 2) as $our_product): ?>
 								<?php $product_category = fetch_category_by_id($our_product['product_category']); ?>
-							<div class="product-box style1">
+								<div class="product-box style1">
 								<div class="imagebox style1">
 									<div class="box-image">
-										<a href="#" title="">
+										<a href="home/product?p_i=<?= $our_product['id'] ?>" title="">
 											<img src="<?= $our_product['product_image'] ?>" alt="">
 										</a>
 									</div><!-- /.box-image -->
 									<div class="box-content">
 										<div class="cat-name">
-											<a href="#" title=""><?= $product_category['designation'] ?></a>
+											<a href="home/search_by_category?category=<?= $product_category['designation'] ?>&c_i=<?= $product_category['id'] ?>" title=""><?= $product_category['designation'] ?></a>
 										</div>
 										<div class="product-name">
-											<a href="#" title=""><?= $our_product['product_name'] ?></a>
+											<a href="home/product?p_i=<?= $our_product['id'] ?>" title=""><?= $our_product['product_name'] ?></a>
 										</div>
 										<div class="price">
 											<span class="regular"><?= $our_product['product_price'] ?></span>
@@ -1261,7 +1261,7 @@
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $our_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -1281,19 +1281,19 @@
 						<div class="owl-carousel-item">
 						<?php foreach(array_slice($our_products , 20, 2) as $our_product): ?>
 								<?php $product_category = fetch_category_by_id($our_product['product_category']); ?>
-							<div class="product-box style1">
+								<div class="product-box style1">
 								<div class="imagebox style1">
 									<div class="box-image">
-										<a href="#" title="">
+										<a href="home/product?p_i=<?= $our_product['id'] ?>" title="">
 											<img src="<?= $our_product['product_image'] ?>" alt="">
 										</a>
 									</div><!-- /.box-image -->
 									<div class="box-content">
 										<div class="cat-name">
-											<a href="#" title=""><?= $product_category['designation'] ?></a>
+											<a href="home/search_by_category?category=<?= $product_category['designation'] ?>&c_i=<?= $product_category['id'] ?>" title=""><?= $product_category['designation'] ?></a>
 										</div>
 										<div class="product-name">
-											<a href="#" title=""><?= $our_product['product_name'] ?></a>
+											<a href="home/product?p_i=<?= $our_product['id'] ?>" title=""><?= $our_product['product_name'] ?></a>
 										</div>
 										<div class="price">
 											<span class="regular"><?= $our_product['product_price'] ?></span>
@@ -1302,7 +1302,7 @@
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $our_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -1322,19 +1322,19 @@
 						<div class="owl-carousel-item">
 						<?php foreach(array_slice($our_products , 22, 2) as $our_product): ?>
 								<?php $product_category = fetch_category_by_id($our_product['product_category']); ?>
-							<div class="product-box style1">
+								<div class="product-box style1">
 								<div class="imagebox style1">
 									<div class="box-image">
-										<a href="#" title="">
+										<a href="home/product?p_i=<?= $our_product['id'] ?>" title="">
 											<img src="<?= $our_product['product_image'] ?>" alt="">
 										</a>
 									</div><!-- /.box-image -->
 									<div class="box-content">
 										<div class="cat-name">
-											<a href="#" title=""><?= $product_category['designation'] ?></a>
+											<a href="home/search_by_category?category=<?= $product_category['designation'] ?>&c_i=<?= $product_category['id'] ?>" title=""><?= $product_category['designation'] ?></a>
 										</div>
 										<div class="product-name">
-											<a href="#" title=""><?= $our_product['product_name'] ?></a>
+											<a href="home/product?p_i=<?= $our_product['id'] ?>" title=""><?= $our_product['product_name'] ?></a>
 										</div>
 										<div class="price">
 											<span class="regular"><?= $our_product['product_price'] ?></span>
@@ -1343,7 +1343,7 @@
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $our_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -1363,19 +1363,19 @@
 						<div class="owl-carousel-item">
 						<?php foreach(array_slice($our_products , 24, 2) as $our_product): ?>
 								<?php $product_category = fetch_category_by_id($our_product['product_category']); ?>
-							<div class="product-box style1">
+								<div class="product-box style1">
 								<div class="imagebox style1">
 									<div class="box-image">
-										<a href="#" title="">
+										<a href="home/product?p_i=<?= $our_product['id'] ?>" title="">
 											<img src="<?= $our_product['product_image'] ?>" alt="">
 										</a>
 									</div><!-- /.box-image -->
 									<div class="box-content">
 										<div class="cat-name">
-											<a href="#" title=""><?= $product_category['designation'] ?></a>
+											<a href="home/search_by_category?category=<?= $product_category['designation'] ?>&c_i=<?= $product_category['id'] ?>" title=""><?= $product_category['designation'] ?></a>
 										</div>
 										<div class="product-name">
-											<a href="#" title=""><?= $our_product['product_name'] ?></a>
+											<a href="home/product?p_i=<?= $our_product['id'] ?>" title=""><?= $our_product['product_name'] ?></a>
 										</div>
 										<div class="price">
 											<span class="regular"><?= $our_product['product_price'] ?></span>
@@ -1384,7 +1384,7 @@
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $our_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -1425,7 +1425,7 @@
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $our_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -1466,7 +1466,7 @@
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $our_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -1507,7 +1507,7 @@
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $our_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -1548,7 +1548,7 @@
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $our_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -1589,7 +1589,7 @@
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
 										<div class="compare-wishlist">
-											<a href="#" class="compare" title="">
+											<a href="home/compare?p_i=<?= $our_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
 											</a>
 											<a href="#" class="wishlist" title="">
@@ -1655,7 +1655,7 @@
 														</a>
 													</div>
 													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
+														<a href="home/compare?p_i=<?= $our_product['id'] ?>" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
 														</a>
 														<a href="#" class="wishlist" title="">
@@ -1693,7 +1693,7 @@
 														</a>
 													</div>
 													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
+														<a href="" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
 														</a>
 														<a href="#" class="wishlist" title="">

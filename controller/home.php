@@ -61,6 +61,24 @@ function product_page(){
 	];
 }
 
+function compare_page(){
+	$operators = fetch_operators();
+	$categories = fetch_categories();
+	$top6products = fetch_top6_products(1);
+	$current_product = fetch_product_details($_GET['p_i']);
+	$product_category = fetch_category_by_id($current_product['product_category']);
+	$recent_products = fetch_products_limit(20);
+	
+	return [
+		'operators'=>$operators,
+		'categories'=>$categories,
+		'top6products'=>$top6products,
+		'current_product'=>$current_product,
+		'product_category'=>$product_category,
+		'recent_products'=>$recent_products
+	];
+}
+
 function add_product_ajax_page(){
 		extract($_POST);
 		if(!empty($_POST['product_id']) && !empty($_POST['user_ip']))
