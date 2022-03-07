@@ -17,7 +17,7 @@
                                 </div>
                             </form><!-- /.subscribe-form -->
                             <div class="checkbox">
-                                <input type="checkbox" id="popup-not-show" name="category">
+                                <input type="checkbox" id="popup-not-show" onclick="set_popup_to_false()" name="category">
                                 <label for="popup-not-show">Ne plus montrer cette popup</label>
                             </div>
                         </div><!-- /.form-popup -->
@@ -33,3 +33,15 @@
         </div><!-- /.row -->
     </div><!-- /.container -->
 </div><!-- /.popup-newsletter -->
+
+<script>
+    function set_popup_to_false(){
+			$.ajax({
+				url:"home/set_popup_to_false",
+				method:"POST",
+				success:function(){
+				// alert("Success");
+				}
+			})
+		}
+</script>

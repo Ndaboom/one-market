@@ -144,11 +144,11 @@
 		});
 
 		$(document).on('change', '#products_record', function(e){
-			let max_records = $(this).children('option:selected').data('limit');
+			let max_records = $(this).children('option:selected').data('max');
 			if(max_records){
 			window.location.href = "home/search?tri=<?= $_GET['tri'] ?>&max="+max_records;	
 			}
 		});
-
+		
 	</script>
 </html>

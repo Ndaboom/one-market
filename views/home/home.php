@@ -1,14 +1,11 @@
 <body class="header_sticky">
 	<div class="boxed">
 		<div class="overlay"></div>
-		<!-- Preloader -->
-		<!-- <div class="preloader">
-			<div class="clear-loading loading-effect-2">
-				<span></span>
-			</div>
-		</div> -->
-        <!-- /.preloader -->
-		<?php //include('views/partials/popup.php'); ?>
+		<?php 
+		if(!isset($_SESSION['news_popup'])){
+			include('views/partials/popup.php'); 
+		}
+		?>
 
 		<?php include('views/partials/header.php'); ?>
 
@@ -899,7 +896,7 @@
 												<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
 											</a>
 										</div>
-										<div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
 											<a href="#" title="">
 												Add to Cart
 											</a>
@@ -940,7 +937,7 @@
 												<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
 											</a>
 										</div>
-										<div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
 											<a href="#" title="">
 												Add to Cart
 											</a>
@@ -981,7 +978,7 @@
 												<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
 											</a>
 										</div>
-										<div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
 											<a href="#" title="">
 												Add to Cart
 											</a>
@@ -1022,7 +1019,7 @@
 												<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
 											</a>
 										</div>
-										<div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
 											<a href="#" title="">
 												Add to Cart
 											</a>
@@ -1063,7 +1060,7 @@
 												<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
 											</a>
 										</div>
-										<div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
 											<a href="#" title="">
 												Add to Cart
 											</a>
@@ -1104,7 +1101,7 @@
 												<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
 											</a>
 										</div>
-										<div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
 											<a href="#" title="">
 												Add to Cart
 											</a>
@@ -1145,7 +1142,7 @@
 												<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
 											</a>
 										</div>
-										<div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
 											<a href="#" title="">
 												Add to Cart
 											</a>
@@ -1186,7 +1183,7 @@
 												<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
 											</a>
 										</div>
-										<div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
 											<a href="#" title="">
 												Add to Cart
 											</a>
@@ -1227,7 +1224,7 @@
 												<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
 											</a>
 										</div>
-										<div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
 											<a href="#" title="">
 												Add to Cart
 											</a>
@@ -1268,7 +1265,7 @@
 												<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
 											</a>
 										</div>
-										<div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
 											<a href="#" title="">
 												Add to Cart
 											</a>
@@ -1309,7 +1306,7 @@
 												<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
 											</a>
 										</div>
-										<div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
 											<a href="#" title="">
 												Add to Cart
 											</a>
@@ -1350,7 +1347,7 @@
 												<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
 											</a>
 										</div>
-										<div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
 											<a href="#" title="">
 												Add to Cart
 											</a>
@@ -1391,7 +1388,7 @@
 												<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
 											</a>
 										</div>
-										<div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
 											<a href="#" title="">
 												Add to Cart
 											</a>
@@ -1432,7 +1429,7 @@
 												<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
 											</a>
 										</div>
-										<div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
 											<a href="#" title="">
 												Add to Cart
 											</a>
@@ -1473,7 +1470,7 @@
 												<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
 											</a>
 										</div>
-										<div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
 											<a href="#" title="">
 												Add to Cart
 											</a>
@@ -1514,7 +1511,7 @@
 												<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
 											</a>
 										</div>
-										<div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
 											<a href="#" title="">
 												Add to Cart
 											</a>
@@ -1555,7 +1552,7 @@
 												<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
 											</a>
 										</div>
-										<div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
 											<a href="#" title="">
 												Add to Cart
 											</a>
@@ -1596,12 +1593,12 @@
 												<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
 											</a>
 										</div>
-										<div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_id="<?= $our_product['id'] ?>">
 											<a href="#" title="">
 												Add to Cart
 											</a>
 										</div>
-									</div><!-- /.box-bottom -->
+									</div>-->
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
 							<?php endforeach; ?>
@@ -1687,11 +1684,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare

@@ -206,7 +206,6 @@ function search_page(){
 	$operators = fetch_operators();
 	$categories = fetch_categories();
 	$top6products = fetch_top6_products(1);
-	$main_products = fetch_products_limit(12);
 	$most_viewed = fetch_most_viewed_products(1,8);
 	$most_saled = fetch_most_saled_products(1, 8);
 	if(isset($_GET['tri']) && $_GET['tri'] == "mostviewed" && $_GET['max']){
@@ -287,6 +286,11 @@ function products_by_views_page(){
 	}
 
 	echo $output;
+	exit();
+}
+
+function set_popup_to_false_page(){
+	$_SESSION['news_popup'] = "no";
 	exit();
 }
 

@@ -11,6 +11,7 @@ return [
 		'compare' => 'compare',
 		'main_search_engine_ajax' => 'main_search_engine_ajax',
 		'products_by_views' => 'products_by_views',
+		'set_popup_to_false' => 'set_popup_to_false',
 		'search'=> 'search',
 	],
 	'auth' => [

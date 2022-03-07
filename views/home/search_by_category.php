@@ -1,14 +1,11 @@
 <body class="header_sticky">
 	<div class="boxed">
 		<div class="overlay"></div>
-		<!-- Preloader -->
-		<!-- <div class="preloader">
-			<div class="clear-loading loading-effect-2">
-				<span></span>
-			</div>
-		</div> -->
-        <!-- /.preloader -->
-		<?php include('views/partials/popup.php'); ?>
+		<?php 
+		if(!isset($_SESSION['news_popup'])){
+			include('views/partials/popup.php'); 
+		}
+		?>
 
 		<?php include('views/partials/header.php'); ?>
 
