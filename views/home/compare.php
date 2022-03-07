@@ -4,7 +4,7 @@
 		<div class="overlay"></div>
 
 		<?php 
-		if(isset($_SESSION['popup']) && $_SESSION['popup'] != "no"){
+		if(!isset($_SESSION['news_popup'])){
 			include('views/partials/popup.php'); 
 		}
 		?>

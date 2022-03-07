@@ -50,22 +50,55 @@
                                                         <label class="form-label">Quantité en stock</label>
                                                         <input type="number" id="product_quantity" name="product_quantity" class="form-control" placeholder="Quantité en stock" required>
                                                 </div>
-                                                
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                    <div class="mb-3">
+                                                        <label for="product_color" class="form-label">Couleur du produit</label>
+                                                        <select id="product_color" class="form-control" name="product_color" required>
+                                                        <?php if(count($colors) != 0): ?>
+                                                        <?php foreach($colors as $color): ?>
+                                                        <option value="<?= $color['id'] ?>"><?= $color['designation'] ?></option>
+                                                        <?php endforeach; ?>
+                                                        <?php else: ?>
+                                                        <option>Aucune couleur</option>
+                                                        <?php endif; ?>
+                                                    </select>
+                                                    </div>
+                                                    </div>
+                                                </div>  
                                             </div> <!-- end col-->
 
                                             <div class="col-xl-6">
                                                     <!-- form View -->
-                                                    <div class="mb-3">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                        <div class="mb-3">
                                                         <label class="form-label">Selectionnez une categorie</label>
                                                         <select id="product_category" class="form-control" name="product_category" required>
                                                             <?php if(count($product_categories) != 0): ?>
                                                             <?php foreach($product_categories as $categorie): ?>
-                                                            <option value="<?= $categorie['id'] ?>"><?= $categorie['designation'] ?></option>
+                                                            <option id="<?= $categorie['id'] ?>" value="<?= $categorie['id'] ?>"><?= $categorie['designation'] ?></option>
                                                             <?php endforeach; ?>
                                                             <?php else: ?>
                                                             <option>Aucune categorie</option>
                                                             <?php endif; ?>
                                                         </select>
+                                                        </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                        <div class="mb-3">
+                                                        <label class="form-label">Selectionnez une sous-categorie</label>
+                                                        <select id="product_sous_category" class="form-control" name="product_sous_category" required>
+                                                            <?php if(count($sous_categories) != 0): ?>
+                                                            <?php foreach($sous_categories as $sous_categorie): ?>
+                                                            <option value="<?= $sous_categorie['id'] ?>"><?= $sous_categorie['designation'] ?></option>
+                                                            <?php endforeach; ?>
+                                                            <?php else: ?>
+                                                            <option>Aucune sous categorie</option>
+                                                            <?php endif; ?>
+                                                        </select>
+                                                        </div>
+                                                        </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-lg-6">
@@ -80,7 +113,21 @@
                                                             <input type="file" id="product_image" name="image" class="form-control" placeholder="Image du produit">
                                                         </div>
                                                         </div>
-                                                    </div>   
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                        <div class="mb-3">
+                                                            <label for="product_model" class="form-label">Model du produit</label>
+                                                            <input type="text" id="product_model" name="product_model" class="form-control" placeholder="Model du produit" required>
+                                                        </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                        <div class="mb-3">
+                                                            <label for="product_make" class="form-label">Marque du produit</label>
+                                                            <input type="text" id="product_make" name="product_make" class="form-control" placeholder="Marque du produit">
+                                                        </div>
+                                                        </div>
+                                                    </div>    
                                             </div> <!-- end col-->
                                         </div>
                                         <!-- end row -->

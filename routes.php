@@ -47,6 +47,7 @@ return [
 		'add_sous_category_validation'=>'add_sous_category_validation',
 		'change_scategory_status'=>'change_scategory_status',
 		'update_sous_category_validation'=>'update_sous_category_validation',
+		'fetch_sous_categories_by_parentid_ajax'=>'fetch_sous_categories_by_parentid_ajax',
 		'aproducts_list' => 'aproducts_list',
 		'product' => 'product',
 		'logout' => 'logout',

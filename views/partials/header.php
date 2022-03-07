@@ -888,6 +888,9 @@
 											<a href="home/shop" title="Shop">Shop</a>
 										</li><!-- /.column-1 -->
 										<li class="column-1">
+											<a href="home/search" title="Shop">Rechercher</a>
+										</li><!-- /.column-1 -->
+										<li class="column-1">
 											<a href="home/contact" title="Contact">Contact</a>
 										</li><!-- /.column-1 -->
 									</ul><!-- /.menu -->

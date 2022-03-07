@@ -1075,8 +1075,12 @@
 
         });
 
-        function fetch_state_cities(state_id){
+        $(document).on('change', '#product_category', function(){
+        var parent_id = $(this).children(":selected").attr("id");
+        fetch_sous_category(parent_id);
+        });
 
+        function fetch_state_cities(state_id){
             var url = 'dashboard/fetch_state_cities';
             $.ajax({
                 type:'POST',
@@ -1088,7 +1092,20 @@
                     $('#city_selector').html(data);
                 }
             });
+        }
 
+        function fetch_sous_category(parent_id){
+            var url = 'dashboard/fetch_sous_categories_by_parentid_ajax';
+            $.ajax({
+                type:'POST',
+                url:url,
+                data: {
+                       parent_id: parent_id
+                      },
+                success: function(data){
+                    $('#product_sous_category').html(data);
+                }
+            });
         }
 
     </script>

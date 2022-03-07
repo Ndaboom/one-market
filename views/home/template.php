@@ -26,11 +26,7 @@
 </head>
 	<?= $content  ?>
 	<script>
-		
-		// $.getJSON('https://api.ipgeolocation.io/ipgeo?apiKey=' + apiKey, function(data) {
-		// 	console.log(JSON.stringify(data, null, 2));
-		// 	fetch_client_cart(data.ip);
-		// });
+		$(document).ready(function() {
 
 		$(document).on('click','.btn-add-cart', function(e){
 			e.preventDefault();
@@ -146,9 +142,12 @@
 		$(document).on('change', '#products_record', function(e){
 			let max_records = $(this).children('option:selected').data('max');
 			if(max_records){
-			window.location.href = "home/search?tri=<?= $_GET['tri'] ?>&max="+max_records;	
+			<?php if(isset($_GET['tri'])): ?>
+			window.location.href = "home/search?tri=<?= $_GET['tri'] ?>&max="+max_records;
+			<?php endif; ?>	
 			}
 		});
+	});
 		
 	</script>
 </html>

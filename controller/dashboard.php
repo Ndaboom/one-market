@@ -275,13 +275,15 @@ function create_product_page(){
     $user = find("users",$_SESSION['user']['id']);
     $categories = fetch_categories();
     $sous_categories = fetch_sous_categories();
+    $colors = fetch_colors(1);
    
     return [
         'users' => $users,
         'shops' => $shops,
         'user' => $user,
         'product_categories'=> $categories,
-        'sous_categories'=>$sous_categories
+        'sous_categories'=>$sous_categories,
+        'colors'=>$colors
     ];
 }
 
@@ -340,6 +342,7 @@ function products_list_page(){
     $users = fetch_users();
     $user = find("users",$_SESSION['user']['id']);
     $products = fetch_products($user['shop_id']);
+    $sous_categories = fetch_sous_categories();
 
     if(isset($_GET['tri'])){
         if($_GET['tri'] == "low_price"){
@@ -354,6 +357,7 @@ function products_list_page(){
         'shops' => $shops,
         'user' => $user,
         'products' => $products,
+        'sous_categories' => $sous_categories
     ];
 }
 
@@ -621,6 +625,27 @@ function change_scategory_status_page(){
         update_scategory_status($_GET['sc_i'],$_GET['status']);
     }
     redirect('dashboard/products_sous_categories');
+}
+
+function fetch_sous_categories_by_parentid_ajax_page(){
+    extract($_POST);
+	$data = fetch_sous_category_by_parent_id($_POST['parent_id']);
+
+	$output = '';
+    if(count($data) != 0){
+    foreach($data as $row){
+        $output .= '
+        <option value="'.$row['id'].'" >'.$row['designation'].'</option>
+        ';
+    }
+    }else{
+    $output .= '<option value="0">Aucune sous categorie</option>';
+    }
+	
+
+    echo $output;
+    exit();
+
 }
 
 

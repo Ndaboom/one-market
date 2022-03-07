@@ -201,17 +201,21 @@ function fetch_users(){
 function insert_product(array $d,$shop_id){
 	global $db;
 	
-	$sql = 'INSERT INTO products_tb (product_name, product_description, product_category, product_price, product_image,product_quantity,shop_id,created_at) 
-			VALUES(:product_name, :product_description, :product_category, :product_price, :product_image,:product_quantity, :shop_id, NOW())';
+	$sql = 'INSERT INTO products_tb (product_name, product_description, product_category,product_sous_category, product_price, product_image,product_quantity,product_model,product_make,product_color,shop_id,created_at) 
+			VALUES(:product_name, :product_description, :product_category, :product_sous_category,:product_price, :product_image,:product_quantity,:product_model,:product_make,:product_color,:shop_id, NOW())';
 	
 	$i = $db->prepare($sql);
 	
 	$i->bindValue(':product_name', $d['product_name']);
 	$i->bindValue(':product_description', $d['product_description']);
 	$i->bindValue(':product_category', $d['product_category']);
+	$i->bindValue(':product_sous_category', $d['product_sous_category']);
 	$i->bindValue(':product_price', $d['product_price']);
 	$i->bindValue(':product_image', $d['product_image']);
 	$i->bindValue(':product_quantity', $d['product_quantity']);
+	$i->bindValue(':product_model', $d['product_model']);
+	$i->bindValue(':product_make', $d['product_make']);
+	$i->bindValue(':product_color', $d['product_color']);
 	$i->bindValue(':shop_id', $shop_id);
 	$i->execute();	
 }
@@ -562,6 +566,24 @@ function fetch_with_price_tri_products($status, $limit,$code){
 	
 	$result = $db->prepare($query);
 	$result->execute(['status' => $status]);
+	$data = $result->fetchAll(PDO::FETCH_ASSOC);
+	return $data;
+}
+
+function fetch_colors($status){
+	global $db;
+	$query = "SELECT * FROM colors_tb WHERE state= :state ";
+	$result = $db->prepare($query);
+	$result->execute(['state'=>$status]);
+	$data = $result->fetchAll(PDO::FETCH_ASSOC);
+	return $data;
+}
+
+function fetch_sous_category_by_parent_id($parent_id){
+	global $db;
+	$query = "SELECT * FROM product_sous_categories WHERE parent_id= :parent_id";
+	$result = $db->prepare($query);
+	$result->execute(['parent_id' => $parent_id]);
 	$data = $result->fetchAll(PDO::FETCH_ASSOC);
 	return $data;
 }
