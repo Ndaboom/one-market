@@ -20,15 +20,15 @@
 					<div class="col-md-12">
 						<ul class="breadcrumbs">
 							<li class="trail-item">
-								<a href="#" title="">Accueil</a>
+								<a href="home/home" title="">Accueil</a>
 								<span><img src="images/icons/arrow-right.png" alt=""></span>
 							</li>
 							<li class="trail-item">
-								<a href="#" title="">Shop</a>
+								<a href="home/shop" title="">Shop</a>
 								<span><img src="images/icons/arrow-right.png" alt=""></span>
 							</li>
 							<li class="trail-end">
-								<a href="#" title="">Smartphones</a>
+								<a href="#" title=""><?= $current_product['product_name'] ?></a>
 							</li>
 						</ul><!-- /.breacrumbs -->
 					</div><!-- /.col-md-12 -->
@@ -53,81 +53,62 @@
 									</thead>
 									<tbody>
 										<tr>
-											<th>Product</th>
+											<th>Produits similaires</th>
+											<?php if(count($similar_products) != 0): ?>
+											<?php foreach($similar_products as $row): ?>
 											<td class="product">
 												<div class="image">
-													<img src="images/product/other/05.jpg" alt="">
+													<img src="<?= $row['product_image'] ?>" alt="">
 												</div>
 												<div class="name">
-													Apple iPad Mini <br />G2356
+													<?= $row['product_name'] ?> <br /><?= $row['product_model'] ?>
 												</div>
 											</td><!-- /.product -->
-											<td class="product">
-												<div class="image">
-													<img src="images/product/other/06.jpg" alt="">
-												</div>
-												<div class="name">
-													New X5C-1 2.4Ghz Gyro <br />RC Quadcopter Drone
-												</div>
-											</td><!-- /.product -->
-											<td class="product">
-												<div class="image">
-													<img src="images/product/other/07.jpg" alt="">
-												</div>
-												<div class="name">
-													Apple iPad Air 2 32GB 9.7" <br />Tablet
-												</div>
-											</td><!-- /.product -->
+											<?php endforeach; ?>
+											<?php else: ?>
+												<td class="product">
+													<div class="name">
+														Aucun projet similaire
+													</div>
+												</td>
+											<?php endif; ?>
 										</tr>
 										<tr>
-											<th>Price</th>
+											<th>Prix</th>
+											<?php if(count($similar_products) != 0): ?>
+											<?php foreach($similar_products as $row): ?>
 											<td class="price">
-												$1,250.00
+												<?= $row['product_price'] ?>
 											</td>
-											<td class="price">
-												$2,009.00
-											</td>
-											<td class="price">
-												$5,759.68
-											</td>
+											<?php endforeach; ?>
+											<?php endif; ?>
 										</tr>
-										<tr>
+										<!-- <tr>
 											<th>Add to Cart</th>
 											<td class="add-cart">
 												<a href="#" title=""><img src="images/icons/add-cart.png" alt="">Add to Cart</a>
 												
-											</td><!-- /.add-cart -->
+											</td>
 											<td class="add-cart">
 												<a href="#" title=""><img src="images/icons/add-cart.png" alt="">Add to Cart</a>
 												
-											</td><!-- /.add-cart -->
+											</td>
 											<td class="add-cart">
 												<a href="#" title=""><img src="images/icons/add-cart.png" alt="">Add to Cart</a>
-											</td><!-- /.add-cart -->
-										</tr>
+											</td>
+										</tr> -->
 										<tr>
 											<th>Description</th>
+											<?php if(count($similar_products) != 0): ?>
+											<?php foreach($similar_products as $row): ?>
 											<td class="description">
 												<p>
-													The iPhone 5c replaces the iPhone 5 in
-													the Apple stable, inheriting its internals, 
-													like the A6 processor, 4" screen...
+													<?= $row['product_description'] ?>
 												</p>
-											</td><!-- /.description -->
-											<td class="description">
-												<p>
-													The iPhone 5c replaces the iPhone 5 in
-													the Apple stable, inheriting its internals, 
-													like the A6 processor, 4" screen...
-												</p>
-											</td><!-- /.description -->
-											<td class="description">
-												<p>
-													The iPhone 5c replaces the iPhone 5 in
-													the Apple stable, inheriting its internals, 
-													like the A6 processor, 4" screen...
-												</p>
-											</td><!-- /.description -->
+											</td>
+											<?php endforeach; ?>
+											<?php endif; ?>
+											
 										</tr>
 										<tr>
 											<th>Color</th>

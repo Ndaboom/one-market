@@ -88,5 +88,67 @@
             }
           	})
 		}
+
+		//Main search box event
+		$(document).on('keyup','.main_search_box', function(e){
+			let content = $(this).val();
+			$('#search_keyword').html(" | Mot clé :<span style='color:gray;'> "+content+"</span>");
+			if(content.length > 3){
+				$.ajax({
+				url:"home/main_search_engine_ajax",
+				method:"POST",
+				data:{content:content},
+				success:function(data){
+				$('#search_result').html(data);
+				}
+				})	
+			}
+		});
+
+		$(document).on('change','.selected_category', function(e){
+			let selected_option = $(this).children('option:selected');
+		});
+
+		function products_by_price(criteria){
+			$.ajax({
+				url:"home/products_by_price",
+				method:"POST",
+				data:{criteria:criteria},
+				success:function(data){
+				$('#main_box').html(data);
+				}
+			})	
+		}
+
+		function products_by_views(criteria){
+			$.ajax({
+				url:"home/products_by_views",
+				method:"POST",
+				data:{criteria:criteria},
+				success:function(data){
+				$('#main_box').html(data);
+				}
+			})	
+		}
+
+		$(document).on('change', '#tri1', function(e){
+			let selected_option = $(this).children('option:selected').data('tri');
+			let default_max = $(this).children('option:selected').data('max');
+			if(selected_option == "most_viewed"){
+				window.location.href = "home/search?tri=most_viewed&max="+default_max;
+			}else if(selected_option == "low_price"){
+				window.location.href = "home/search?tri=low_price&max="+default_max;
+			}else if(selected_option == "highest_price"){
+				window.location.href = "home/search?tri=highest_price&max="+default_max;
+			}
+		});
+
+		$(document).on('change', '#products_record', function(e){
+			let max_records = $(this).children('option:selected').data('limit');
+			if(max_records){
+			window.location.href = "home/search?tri=<?= $_GET['tri'] ?>&max="+max_records;	
+			}
+		});
+
 	</script>
 </html>

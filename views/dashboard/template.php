@@ -553,7 +553,12 @@
                                     <span> Categories produits </span> <span class="badge bg-success rounded-pill float-end"><?= count($categories) != 0 ? count($categories) : "0" ?></span>
                                 </a>
                             </li>
-
+                            <li>
+                                <a href="dashboard/products_sous_categories">
+                                    <i data-feather="shopping-cart"></i>
+                                    <span> Sous-categories</span> <span class="badge bg-success rounded-pill float-end"><?= count($sous_categories) != 0 ? count($sous_categories) : "0" ?></span>
+                                </a>
+                            </li>
                             <?php else: ?>
             
                             <li>
@@ -566,6 +571,12 @@
                                 <a href="dashboard/products_categories">
                                     <i data-feather="shopping-cart"></i>
                                     <span> Categories des produits </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="dashboard/products_sous_categories">
+                                    <i data-feather="shopping-cart"></i>
+                                    <span> Sous-categories</span> <span class="badge bg-success rounded-pill float-end"><?= count($sous_categories) != 0 ? count($sous_categories) : "0" ?></span>
                                 </a>
                             </li>
                             <?php endif; ?>

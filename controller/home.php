@@ -34,6 +34,7 @@ function search_by_category_page(){
 	$categories = fetch_categories();
 	$top6products = fetch_top6_products(1);
 	$products = fetch_products_by_category($_GET['c_i']);
+
 	
 	return [
 		'operators'=>$operators,
@@ -67,6 +68,7 @@ function compare_page(){
 	$top6products = fetch_top6_products(1);
 	$current_product = fetch_product_details($_GET['p_i']);
 	$product_category = fetch_category_by_id($current_product['product_category']);
+	$similar_products = fetch_similar_products($_GET['p_i'],$current_product['product_category'],3);
 	$recent_products = fetch_products_limit(20);
 	
 	return [
@@ -75,7 +77,8 @@ function compare_page(){
 		'top6products'=>$top6products,
 		'current_product'=>$current_product,
 		'product_category'=>$product_category,
-		'recent_products'=>$recent_products
+		'recent_products'=>$recent_products,
+		'similar_products'=>$similar_products
 	];
 }
 
@@ -164,6 +167,126 @@ function fetch_cart_ajax_page(){
 		echo $output;
 		
 	}
+	exit();
+}
+
+function main_search_engine_ajax_page(){
+	extract($_POST);
+	$data = search_for($_POST['content']);
+
+	if(count($data) != 0){
+		$output = '<ul>';
+		foreach($data as $row){
+		$output .= '<li>
+		<div class="image">
+			<img src="'.$row['product_image'].'" alt="">
+		</div>
+			<div class="info-product">
+				<div class="name">
+					<a href="home/compare?p_i='.$row['id'].'" title="">'.$row['product_name'].'</a>
+				</div>
+				<div class="price">
+					<span class="sale">
+					'.$row['product_price'].' $
+					</span>
+				</div>
+			</div>
+		</li>';
+		}
+		$output .= '</ul>';
+	}else{
+		$output = 'Aucun element trouvé';
+	}
+	
+	echo $output;
+	exit();
+}
+
+function search_page(){
+	$operators = fetch_operators();
+	$categories = fetch_categories();
+	$top6products = fetch_top6_products(1);
+	$main_products = fetch_products_limit(12);
+	$most_viewed = fetch_most_viewed_products(1,8);
+	$most_saled = fetch_most_saled_products(1, 8);
+	if(isset($_GET['tri']) && $_GET['tri'] == "mostviewed" && $_GET['max']){
+	$products = fetch_most_viewed_products(1, $_GET['max']);
+	}else if(isset($_GET['tri']) && $_GET['tri'] == "low_price" && $_GET['max']){
+	$products = fetch_with_price_tri_products(1, $_GET['max'],0);
+	}else if(isset($_GET['tri']) && $_GET['tri'] == "highest_price" && $_GET['max']){
+	$products = fetch_with_price_tri_products(1, $_GET['max'],1);
+	}else{
+	$products = fetch_products_limit(20);
+	}
+	
+	return [
+		'operators'=>$operators,
+		'categories'=>$categories,
+		'top6products'=>$top6products,
+		'main_products'=>$products,
+		'most_viewed'=>$most_viewed,
+		'most_saled'=>$most_saled
+	];
+}
+
+function products_by_views_page(){
+	extract($_POST);
+	$data = fetch_most_viewed_products(1, 12);
+
+	$output = '';
+	foreach($data as $product){
+		$product_category = fetch_category_by_id($product['product_category']);
+		$output .= '
+		<div class="col-lg-3 col-md-4 col-sm-6">
+			<div class="product-box">
+				<div class="imagebox">
+					<span class="item-new">NEW</span>
+					<div class="box-image owl-carousel-1">
+						<div class="image">
+							<a href="#" title="">
+								<img src="'.$product['product_image'].'" alt="">
+							</a>
+						</div>
+						<div class="image">
+							<a href="#" title="">
+								<img src="'.$product['product_image'].'" alt="">
+							</a>
+						</div>
+						<div class="image">
+							<a href="#" title="">
+								<img src="'.$product['product_image'].'" alt="">
+							</a>
+						</div>
+					</div>
+					<div class="box-content">
+						<div class="cat-name">
+							<a href="#" title="">'.$product_category['designation'].'</a>
+						</div>
+						<div class="product-name">
+							<a href="#" title="">'.$product['product_name'].'<br />'.$product['product_model'].'</a>
+						</div>
+						<div class="price">
+							<span class="sale">$'.$product['product_price'].'</span>
+							<span class="regular">$</span>
+						</div>
+					</div>
+					<div class="box-bottom">
+						<div class="compare-wishlist">
+							<a href="#" class="compare" title="">
+								<img src="images/icons/compare.png" alt="">Compare
+							</a>
+							<a href="#" class="wishlist" title="">
+								<img src="images/icons/wishlist.png" alt="">Wishlist
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		';
+	}
+
+	echo $output;
 	exit();
 }
 

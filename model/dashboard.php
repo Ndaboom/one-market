@@ -265,6 +265,15 @@ function fetch_categories(){
 	return $data;
 }
 
+function fetch_sous_categories(){
+	global $db;
+	$query = "SELECT * FROM product_sous_categories";
+	$result = $db->prepare($query);
+	$result->execute();
+	$data = $result->fetchAll(PDO::FETCH_ASSOC);
+	return $data;
+}
+
 function fetch_todays_product(){
 	global $db;
 	$query = "SELECT * FROM products_tb
@@ -368,6 +377,18 @@ function fetch_products_by_category($category_id){
 	return $data;
 }
 
+//fetch similar products to
+function fetch_similar_products($product_id,$category_id, $limit){
+	global $db;
+	$query = "SELECT * FROM products_tb WHERE product_category= :id AND id != ".$product_id."
+			  ORDER BY product_price ASC
+			  LIMIT ".$limit." ";
+	$result = $db->prepare($query);
+	$result->execute(['id' => $category_id]);
+	$data = $result->fetchAll(PDO::FETCH_ASSOC);
+	return $data;
+}
+
 //fetch category info by id
 function fetch_category_by_id($category_id){
 	global $db;
@@ -433,6 +454,114 @@ function fetch_client_cart($client_ip){
 	$query = "SELECT * FROM cart_tb WHERE client_ip= :client_ip";
 	$result = $db->prepare($query);
 	$result->execute(['client_ip' => $client_ip]);
+	$data = $result->fetchAll(PDO::FETCH_ASSOC);
+	return $data;
+}
+
+function search_for($keyword){
+	global $db;
+
+	$query = "SELECT * FROM product_categories WHERE designation like :designation";
+	$result = $db->prepare($query);
+	$result->execute(['designation' => '%'.$keyword.'%']);
+	$categorie = $result->fetch(PDO::FETCH_ASSOC);
+
+	$query = "SELECT * FROM products_tb WHERE product_name like :product_name";
+	$result = $db->prepare($query);
+	$result->execute(['product_name' => '%'.$keyword.'%']);
+	$products = $result->fetchAll(PDO::FETCH_ASSOC);
+
+	if(!empty($categorie)){
+		$query = "SELECT * FROM products_tb INNER JOIN product_categories ON products_tb.product_category= product_categories.id 
+		WHERE product_category = '".$categorie['id']."'
+		ORDER BY products_tb.product_price ASC";
+		$result = $db->prepare($query);
+		$result->execute();
+		$data = $result->fetchAll(PDO::FETCH_ASSOC);
+	}else{
+		return $products;
+	}
+	
+	return $data;
+}
+
+function add_sous_category(array $d, $shop_id){
+	global $db;
+	
+	$sql = 'INSERT INTO product_sous_categories (designation, shop_id,parent_id,status) 
+			VALUES(:designation,:shop_id,:parent_id,:status)';
+	
+	$i = $db->prepare($sql);
+	
+	$i->bindValue(':designation', $d['designation']);
+	$i->bindValue(':shop_id', $shop_id);
+	$i->bindValue(':parent_id', $d['parent_id']);
+	$i->bindValue(':status', $d['status']);
+	$i->execute();
+}
+
+function fetch_category_details($category_id){
+	global $db;
+	$query = "SELECT * FROM product_categories WHERE id= :product_category";
+	$result = $db->prepare($query);
+	$result->execute(['product_category' => $category_id]);
+	$data = $result->fetch(PDO::FETCH_ASSOC);
+	return $data;
+}
+
+function update_scategory_status($sc_i, $status){
+	global $db;
+	
+	$sql = 'UPDATE product_sous_categories SET status= :status 
+			WHERE id= :id';
+	
+	$i = $db->prepare($sql);
+	
+	$i->bindValue(':status', $status);
+	$i->bindValue(':id', $sc_i);
+	$i->execute();
+}
+
+function update_sous_category(array $d, $sc_i){
+	global $db;
+	
+	$sql = 'UPDATE product_sous_categories 
+			SET designation= :designation,parent_id= :parent_id,status= :status 
+			WHERE id= :id';
+
+	$i = $db->prepare($sql);
+	$i->bindValue(':designation', $d['designation']);
+	$i->bindValue(':parent_id', $d['parent_id']);
+	$i->bindValue(':status', $d['status']);
+	$i->bindValue(':id', $sc_i);
+	if($i->execute()){
+	return true;
+	}
+}
+
+function fetch_sous_category_details($sc_i){
+	global $db;
+	$query = "SELECT * FROM product_sous_categories WHERE id= :id";
+	$result = $db->prepare($query);
+	$result->execute(['id' => $sc_i]);
+	$data = $result->fetch(PDO::FETCH_ASSOC);
+	return $data;
+}
+
+//Fetch most saled products with custom limit
+function fetch_with_price_tri_products($status, $limit,$code){
+	global $db;
+	$query = '';
+	if($code == 0){
+	$query = "SELECT * FROM products_tb WHERE product_status= :status 
+			  ORDER BY product_price ASC LIMIT ".$limit."";
+	}else if($code == 1){
+	$query = "SELECT * FROM products_tb WHERE product_status= :status 
+		ORDER BY product_price DESC LIMIT ".$limit."";
+	}
+	
+	$result = $db->prepare($query);
+	$result->execute(['status' => $status]);
 	$data = $result->fetchAll(PDO::FETCH_ASSOC);
 	return $data;
 }

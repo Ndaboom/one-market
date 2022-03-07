@@ -92,13 +92,10 @@
 						</div><!-- /.col-md-3 -->
 						<div class="col-md-6">
 							<div class="top-search">
-								<form action="#" method="get" class="form-search" accept-charset="utf-8">
+								<form action="home/search" method="post" class="form-search" accept-charset="utf-8">
 									<div class="cat-wrap">
-										<select name="category">
+										<select name="category" class="selected_category">
 											<option hidden value="">Toutes catégories</option>
-											<option hidden value="">Cameras</option>
-											<option hidden value="">Computer</option>
-											<option hidden value="">Laptops</option>
 										</select>
 										<span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
 										<div class="all-categories">
@@ -108,7 +105,7 @@
 												<div class="title">
 													<?= $operator['operator_name'] ?>
 												</div>
-												<ul>
+												<ul class="categories_list">
 												<?php if(count($categories) != 0): ?>
 													<?php foreach($categories as $category): ?>
 													<li><?= $category['designation'] ?></li>
@@ -129,7 +126,10 @@
 										<div class="search-suggestions">
 											<div class="box-suggestions">
 												<div class="title">
-													Suggestions de recherche
+													Suggestions de recherche <span id="search_keyword"></span>
+												</div>
+												<div id="search_result">
+
 												</div>
 												<ul>
 												<?php if(count($top6products) != 0): ?>

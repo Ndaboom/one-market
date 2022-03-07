@@ -9,6 +9,7 @@ function home_page()
     $products = fetch_all_products();
     $operators = fetch_operators();
     $categories = fetch_categories();
+    $sous_categories = fetch_sous_categories();
     $todays_products = fetch_todays_product();
    
     return [
@@ -18,6 +19,7 @@ function home_page()
         'products' => $products,
         'operators' => $operators,
         'categories' => $categories,
+        'sous_categories' => $sous_categories,
         'todays_products' => $todays_products,
     ];
 }
@@ -28,6 +30,11 @@ function create_operator_page(){
     $states = fetch_states();
     $cities = fetch_cities();
     $user = find("users",$_SESSION['user']['id']);
+    $categories = fetch_categories();
+    $sous_categories = fetch_sous_categories();
+    $operators = fetch_operators();
+    $users = fetch_users();
+    $products = fetch_all_products();
 
     if(isset($_GET['op_i'])){
         $operator = fetch_operator_details($_GET['op_i']);
@@ -36,14 +43,24 @@ function create_operator_page(){
             'user' => $user,
             'operator' => $operator,
             'states' => $states,
-            'cities' => $cities
+            'cities' => $cities,
+            'categories'=> $categories,
+            'sous_categories'=>$sous_categories,
+            'operators' => $operators,
+            'users' => $users,
+            'products' => $products,
         ];
     }else{
         return [
             'countries' => $countries,
             'user' => $user,
             'states' => $states,
-            'cities' => $cities
+            'cities' => $cities,
+            'categories'=> $categories,
+            'sous_categories'=>$sous_categories,
+            'operators' => $operators,
+            'users' => $users,
+            'products' => $products,
         ];
     }
 
@@ -159,6 +176,7 @@ function create_user_page(){
     $states = fetch_states();
     $cities = fetch_cities();
     $product_categories = fetch_categories();
+    $sous_categories = fetch_sous_categories();
 
     if(isset($_GET['u_i'])){
     $current_user = find("users",$_GET['u_i']);
@@ -169,7 +187,8 @@ function create_user_page(){
             'current_user' => $current_user,
             'states' => $states,
             'cities' => $cities,
-            'product_categories'=> $product_categories
+            'product_categories'=> $product_categories,
+            'sous_categories'=>$sous_categories
         ];
     }else{
         return [
@@ -203,6 +222,7 @@ function operators_list_page(){
     $user = find("users",$_SESSION['user']['id']);
     $products = fetch_products($user['shop_id']);
     $categories = fetch_categories();
+    $sous_categories = fetch_sous_categories();
     
     return [
 		'countries' => $countries,
@@ -213,6 +233,7 @@ function operators_list_page(){
         'user' => $user,
         'products' => $products,
         'categories' => $categories,
+        'sous_categories' => $sous_categories,
 	];    
 }
 
@@ -225,6 +246,7 @@ function users_list_page(){
     $user = find("users",$_SESSION['user']['id']);
     $products = fetch_products($user['shop_id']);
     $categories = fetch_categories();
+    $sous_categories = fetch_sous_categories();
     
     return [
 		'countries' => $countries,
@@ -235,6 +257,7 @@ function users_list_page(){
         'user' => $user,
         'products' => $products,
         'categories' => $categories,
+        'sous_categories' => $sous_categories
 	];
 }
 
@@ -251,12 +274,14 @@ function create_product_page(){
     $users = fetch_users();
     $user = find("users",$_SESSION['user']['id']);
     $categories = fetch_categories();
+    $sous_categories = fetch_sous_categories();
    
     return [
         'users' => $users,
         'shops' => $shops,
         'user' => $user,
-        'product_categories'=> $categories
+        'product_categories'=> $categories,
+        'sous_categories'=>$sous_categories
     ];
 }
 
@@ -289,6 +314,7 @@ function aproducts_list_page(){
     $products = fetch_all_products();
     $operators = fetch_operators();
     $categories = fetch_categories();
+    $sous_categories = fetch_sous_categories();
 
     if(isset($_GET['tri'])){
         if($_GET['tri'] == "low_price"){
@@ -304,7 +330,8 @@ function aproducts_list_page(){
         'user' => $user,
         'products' => $products,
         'operators' => $operators,
-        'categories' => $categories
+        'categories' => $categories,
+        'sous_categories' => $sous_categories
     ];
 }
 
@@ -336,6 +363,7 @@ function products_categories_page(){
     $user = find("users",$_SESSION['user']['id']);
     $products = fetch_products($user['shop_id']);
     $categories = fetch_categories();
+    $sous_categories = fetch_sous_categories();
 
     return [
         'users' => $users,
@@ -343,6 +371,27 @@ function products_categories_page(){
         'user' => $user,
         'products' => $products,
         'categories' => $categories,
+        'sous_categories' => $sous_categories
+    ];
+}
+
+function aproducts_categories_page(){
+    $shops = fetch_shops();
+    $users = fetch_users();
+    $user = find("users",$_SESSION['user']['id']);
+    $products = fetch_all_products();
+    $categories = fetch_categories();
+    $sous_categories = fetch_sous_categories();
+    $operators = fetch_operators();
+
+    return [
+        'users' => $users,
+        'shops' => $shops,
+        'user' => $user,
+        'products' => $products,
+        'categories' => $categories,
+        'operators' => $operators,
+        'sous_categories' => $sous_categories
     ];
 }
 
@@ -354,6 +403,7 @@ function product_page(){
     $product = fetch_product_details($_GET['pr_i']);
     $operators = fetch_operators();
     $categories = fetch_categories();
+    $sous_categories = fetch_sous_categories();
 
    
     return [
@@ -363,7 +413,8 @@ function product_page(){
         'products' => $products,
         'product' => $product,
         'operators' => $operators,
-        'categories' => $categories
+        'categories' => $categories,
+        'sous_categories'=> $sous_categories
     ];
 }
 
@@ -374,6 +425,7 @@ function edit_product_page(){
     $products = fetch_products($user['shop_id']);
     $product = fetch_product_details($_GET['pr_i']);
     $categories = fetch_categories();
+    $sous_categories = fetch_sous_categories();
 
    
     return [
@@ -382,7 +434,8 @@ function edit_product_page(){
         'user' => $user,
         'products' => $products,
         'product' => $product,
-        'categories' => $categories
+        'categories' => $categories,
+        'sous_categories' => $sous_categories,
     ];
 }
 
@@ -417,6 +470,8 @@ function create_category_page(){
     $user = find("users",$_SESSION['user']['id']);
     $products = fetch_products($user['shop_id']);
     $categories = fetch_categories();
+    $sous_categories = fetch_sous_categories();
+    $operators = fetch_operators();
 
    
     return [
@@ -424,7 +479,9 @@ function create_category_page(){
         'shops' => $shops,
         'user' => $user,
         'products' => $products,
-        'categories' => $categories
+        'categories' => $categories,
+        'sous_categories' => $sous_categories,
+        'operators' => $operators
     ]; 
 }
 
@@ -455,6 +512,8 @@ function user_config_page(){
     $user = find("users",$_SESSION['user']['id']);
     $products = fetch_products($user['shop_id']);
     $categories = fetch_categories();
+    $sous_categories = fetch_sous_categories();
+    $operators = fetch_operators();
 
    
     return [
@@ -462,8 +521,106 @@ function user_config_page(){
         'shops' => $shops,
         'user' => $user,
         'products' => $products,
-        'categories' => $categories
+        'categories' => $categories,
+        'sous_categories' => $sous_categories,
+        'operators' => $operators,
     ]; 
+}
+
+function products_sous_categories_page(){
+    $shops = fetch_shops();
+    $users = fetch_users();
+    $user = find("users",$_SESSION['user']['id']);
+    $products = fetch_products($user['shop_id']);
+    $categories = fetch_categories();
+    $sous_categories = fetch_sous_categories();
+    $operators = fetch_operators();
+   
+    return [
+        'users' => $users,
+        'shops' => $shops,
+        'user' => $user,
+        'products' => $products,
+        'categories' => $categories,
+        'sous_categories' => $sous_categories,
+        'operators' => $operators
+    ]; 
+}
+
+function create_sous_category_page(){
+    $shops = fetch_shops();
+    $users = fetch_users();
+    $user = find("users",$_SESSION['user']['id']);
+    $products = fetch_products($user['shop_id']);
+    $categories = fetch_categories();
+    $sous_categories = fetch_sous_categories();
+    $operators = fetch_operators();
+
+    if(isset($_GET['sc_i'])){
+        $sous_categorie = fetch_sous_category_details($_GET['sc_i']);
+    }else{
+        $sous_categorie = [];
+    }
+   
+    return [
+        'users' => $users,
+        'shops' => $shops,
+        'user' => $user,
+        'products' => $products,
+        'categories' => $categories,
+        'sous_categories' => $sous_categories,
+        'sous_categorie' => $sous_categorie,
+        'operators' => $operators
+    ]; 
+}
+
+function add_sous_category_validation_page(){
+    $user = find("users", $_SESSION['user']['id']);
+
+    if (is_method('POST')) {
+
+        $data = $_POST;
+
+        if($_POST['status'] == "on"){
+            $data['status'] = "1";
+        }else{
+            $data['status'] = "0";
+        }
+
+        add_sous_category($data, $user['shop_id']);
+
+        redirect('dashboard/products_sous_categories');
+    }
+
+    redirect('dashboard/create_category');
+}
+
+function update_sous_category_validation_page(){
+    $user = find("users", $_SESSION['user']['id']);
+
+    if (is_method('POST')) {
+
+        $data = $_POST;
+
+        if($_POST['status'] == "on"){
+            $data['status'] = "1";
+        }else{
+            $data['status'] = "0";
+        }
+
+        update_sous_category($data, $_GET['sc_i']);
+
+        redirect('dashboard/create_sous_category?sc_i='.$_GET['sc_i']);
+    }
+
+    redirect('dashboard/create_sous_category?sc_i='.$_GET['sc_i']);
+}
+
+function change_scategory_status_page(){
+    if(isset($_GET['sc_i']) || isset($_GET['status'])) {
+        update_scategory_status($_GET['sc_i'],$_GET['status']);
+    }
+    redirect('dashboard/products_sous_categories');
 }
 
 

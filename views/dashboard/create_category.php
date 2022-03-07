@@ -3,16 +3,11 @@
     $title = "Créer une categorie"
 
 ?>
-            <!-- ============================================================== -->
-            <!-- Start Page Content here -->
-            <!-- ============================================================== -->
 
             <div class="content-page">
                 <div class="content">
-
                     <!-- Start Content-->
-                    <div class="container-fluid">
-                        
+                    <div class="container-fluid">  
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
