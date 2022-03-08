@@ -52,6 +52,8 @@ return [
 		'makes_list' => 'makes_list',
 		'create_product_make' => 'create_product_make',
 		'add_make_validation' => 'add_make_validation',
+		'update_make_validation' => 'update_make_validation',
+		'change_make_status' => 'change_make_status',
 		'product' => 'product',
 		'logout' => 'logout',
 	],

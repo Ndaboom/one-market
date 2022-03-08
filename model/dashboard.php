@@ -381,6 +381,16 @@ function fetch_products_by_category($category_id){
 	return $data;
 }
 
+//Fetch products by category
+function fetch_products_by_maker($maker_id){
+	global $db;
+	$query = "SELECT * FROM products_tb WHERE product_make= :id";
+	$result = $db->prepare($query);
+	$result->execute(['id' => $maker_id]);
+	$data = $result->fetchAll(PDO::FETCH_ASSOC);
+	return $data;
+}
+
 //fetch similar products to
 function fetch_similar_products($product_id,$category_id, $limit){
 	global $db;
@@ -518,6 +528,21 @@ function add_make(array $d, $shop_id){
 	$i->execute();
 }
 
+function update_make(array $d, $make_id){
+	global $db;
+	$sql = 'UPDATE products_makes 
+			SET designation= :designation,state= :status 
+			WHERE id= :id';
+
+	$i = $db->prepare($sql);
+	$i->bindValue(':designation', $d['make_designation']);
+	$i->bindValue(':status', $d['status']);
+	$i->bindValue(':id', $make_id);
+	if($i->execute()){
+	return true;
+	}
+}
+
 function fetch_category_details($category_id){
 	global $db;
 	$query = "SELECT * FROM product_categories WHERE id= :product_category";
@@ -537,6 +562,19 @@ function update_scategory_status($sc_i, $status){
 	
 	$i->bindValue(':status', $status);
 	$i->bindValue(':id', $sc_i);
+	$i->execute();
+}
+
+function update_make_status($m_i, $status){
+	global $db;
+	
+	$sql = 'UPDATE products_makes SET state= :status 
+			WHERE id= :id';
+	
+	$i = $db->prepare($sql);
+	
+	$i->bindValue(':status', $status);
+	$i->bindValue(':id', $m_i);
 	$i->execute();
 }
 
@@ -604,9 +642,16 @@ function fetch_colors($status){
 
 function fetch_products_makes($status){
 	global $db;
-	$query = "SELECT * FROM products_makes WHERE state= :state ";
+	if($status == 3){
+	$query = "SELECT * FROM products_makes";
+	$result = $db->prepare($query);
+	$result->execute();
+	}else{
+	$query = "SELECT * FROM products_makes  WHERE state= :state";
 	$result = $db->prepare($query);
 	$result->execute(['state'=>$status]);
+	}
+	
 	$data = $result->fetchAll(PDO::FETCH_ASSOC);
 	return $data;
 }

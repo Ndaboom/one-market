@@ -89,38 +89,20 @@
 													<input type="text" name="marque" placeholder="Rechercher une marque">
 												</form>
 												<ul class="box-checkbox scroll">
+												<?php if(count($makes) != 0): ?>
+													<?php foreach($makes as $make): ?>
+														<?php $by_maker = fetch_products_by_maker($make['id']); ?>
+													<li class="check-box">
+														<input type="checkbox" id="checkbox<?= $make['id'] ?>" name="checkbox<?= $make['id'] ?>">
+														<label for="checkbox<?= $make['id'] ?>"><?= $make['designation'] ?> <span>(<?= count($by_maker) ?>)</span></label>
+													</li>
+													<?php endforeach; ?>
+												<?php else: ?>
 													<li class="check-box">
 														<input type="checkbox" id="checkbox1" name="checkbox1">
-														<label for="checkbox1">Apple <span>(4)</span></label>
+														<label for="checkbox1">Aucune marque </span></label>
 													</li>
-													<li class="check-box">
-														<input type="checkbox" id="checkbox2" name="checkbox2">
-														<label for="checkbox2">Samsung <span>(2)</span></label>
-													</li>
-													<li class="check-box">
-														<input type="checkbox" id="checkbox3" name="checkbox3">
-														<label for="checkbox3">HTC <span>(2)</span></label>
-													</li>
-													<li class="check-box">
-														<input type="checkbox" id="checkbox4" name="checkbox4">
-														<label for="checkbox4">LG <span>(2)</span></label>
-													</li>
-													<li class="check-box">
-														<input type="checkbox" id="checkbox5" name="checkbox5">
-														<label for="checkbox5">Dell <span>(1)</span></label>
-													</li>
-													<li class="check-box">
-														<input type="checkbox" id="checkbox6" name="checkbox6">
-														<label for="checkbox6">Sony <span>(3)</span></label>
-													</li>
-													<li class="check-box">
-														<input type="checkbox" id="checkbox7" name="checkbox7">
-														<label for="checkbox7">Bphone <span>(4)</span></label>
-													</li>
-													<li class="check-box">
-														<input type="checkbox" id="checkbox8" name="chebckox8">
-														<label for="checkbox8">Oppo <span>(4)</span></label>
-													</li>
+												<?php endif; ?>
 												</ul>
 											</div>
 										</div><!-- /.widget widget-brands -->

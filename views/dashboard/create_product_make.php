@@ -54,38 +54,28 @@ $title = "Créer une marque"
                             </div> <!-- end card-->
                         </form>
                         <?php else: ?>
-                            <form method="post" action="dashboard/update_sous_category_validation?sc_i=<?= $sous_categorie['id'] ?>">
+                            <form method="post" action="dashboard/update_make_validation?m_i=<?= $model_details['id'] ?>">
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="row">
+                                <div class="row">
                                         <div class="col-xl-6">
                                             <div class="mb-3">
-                                                <label for="designation" class="form-label">Designation de la categorie</label>
-                                                <input type="text" id="designation" name="designation" class="form-control" value="<?= $sous_categorie['designation'] ?>" placeholder="Designation" required>
+                                                <label for="make_designation" class="form-label">Designation de la marque</label>
+                                                <input type="text" id="make_designation" name="make_designation" class="form-control" value="<?= $model_details['designation'] ?>" placeholder="Designation" required>
                                             </div>
                                             <div class="mb-3">
-                                                <label class="form-label">Etat</label> <br/>
+                                                <label class="form-label" for="status">Etat</label> <br/>
                                                 <div class="form-check form-switch">
-                                                    <input type="checkbox" class="form-check-input" id="customSwitch1" name="status" <?= $sous_categorie['status'] == 1 ? 'checked' : ''?> >
-                                                    <label class="form-check-label" for="customSwitch1">Basculer cet interrupteur pour activer cette sous categorie</label>
+                                                    <input type="checkbox" class="form-check-input" id="customSwitch1" name="status" <?= $model_details['state'] == 1 ? 'checked' : ''?>>
+                                                    <label class="form-check-label" for="customSwitch1">Basculer cet interrupteur pour activer cette marque</label>
                                                 </div>
                                             </div>
                                         </div> <!-- end col-->
-                                        <div class="col-xl-6">
-                                            <div class="mb-3">
-                                                <label for="parent_id" class="form-label">Selectionnez la categorie parent</label>
-                                                <select class="form-control" name="parent_id">
-                                                    <?php foreach($categories as $row): ?>
-                                                        <option value="<?= $row['id'] ?>" <?= $row['id'] == $sous_categorie['parent_id'] ? 'selected="selected"' : '' ?>><?= $row['designation'] ?></option>
-                                                    <?php endforeach; ?>
-                                                </select>
-                                            </div>
-                                        </div>
                                     </div>
                                     <!-- end row -->
                                     <div class="row mt-3">
                                         <div class="col-12 text-center">
-                                            <input type="submit" class="btn btn-success waves-effect waves-light m-1" name="update_sous_category" value="Modifier"/>
+                                            <input type="submit" class="btn btn-success waves-effect waves-light m-1" name="update_make" value="Modifier"/>
                                             <button type="button" class="btn btn-light waves-effect waves-light m-1"><i class="fe-x me-1"></i> Annuler</button>
                                         </div>
                                     </div>

@@ -542,15 +542,15 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="dashboard/aproducts_list">
-                                    <i data-feather="shopping-cart"></i>
-                                    <span> Produits </span> <span class="badge bg-success rounded-pill float-end"><?= count($products) != 0 ? count($products) : "0" ?></span>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="dashboard/makes_list">
                                     <i data-feather="shopping-cart"></i>
                                     <span> Marques </span> <span class="badge bg-success rounded-pill float-end"><?= count($products_makes) != 0 ? count($products_makes) : "0" ?></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="dashboard/aproducts_list">
+                                    <i data-feather="shopping-cart"></i>
+                                    <span> Produits </span> <span class="badge bg-success rounded-pill float-end"><?= count($products) != 0 ? count($products) : "0" ?></span>
                                 </a>
                             </li>
                             <li>
@@ -566,7 +566,12 @@
                                 </a>
                             </li>
                             <?php else: ?>
-            
+                            <li>
+                                <a href="dashboard/makes_list">
+                                    <i data-feather="shopping-cart"></i>
+                                    <span> Marques </span> <span class="badge bg-success rounded-pill float-end"><?= count($products_makes) != 0 ? count($products_makes) : "0" ?></span>
+                                </a>
+                            </li>
                             <li>
                                 <a href="dashboard/products_list">
                                     <i data-feather="shopping-cart"></i>

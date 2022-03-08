@@ -483,6 +483,32 @@ function add_make_validation_page(){
         add_make($data, $user['shop_id']);
 
         redirect('dashboard/makes_list');
+    }
+}
+
+function update_make_validation_page(){
+
+    if (is_method('POST')) {
+
+        $data = $_POST;
+
+        if($_POST['status'] == "on"){
+            $data['status'] = "1";
+        }else{
+            $data['status'] = "0";
+        }
+
+        update_make($data, $_GET['m_i']);
+
+        redirect('dashboard/create_product_make?m_i='.$_GET['m_i']);
+    }
+}
+
+function change_make_status_page(){
+    if(isset($_GET['m_i']) || isset($_GET['status'])) {
+        update_make_status($_GET['m_i'],$_GET['status']);
+    }
+    redirect('dashboard/makes_list');
 }
 
 function edit_product_validation_page(){
@@ -518,7 +544,7 @@ function create_category_page(){
     $categories = fetch_categories();
     $sous_categories = fetch_sous_categories();
     $operators = fetch_operators();
-    $products_makes = fetch_products_makes(1);
+    $products_makes = fetch_products_makes(3);
    
     return [
         'users' => $users,
@@ -705,7 +731,7 @@ function makes_list_page(){
     $products = fetch_products($user['shop_id']);
     $categories = fetch_categories();
     $sous_categories = fetch_sous_categories();
-    $products_makes = fetch_products_makes(1);
+    $products_makes = fetch_products_makes(3);
     
     return [
 		'countries' => $countries,

@@ -208,6 +208,7 @@ function search_page(){
 	$top6products = fetch_top6_products(1);
 	$most_viewed = fetch_most_viewed_products(1,8);
 	$most_saled = fetch_most_saled_products(1, 8);
+	$makes = fetch_products_makes(3);
 	if(isset($_GET['tri']) && $_GET['tri'] == "mostviewed" && $_GET['max']){
 	$products = fetch_most_viewed_products(1, $_GET['max']);
 	}else if(isset($_GET['tri']) && $_GET['tri'] == "low_price" && $_GET['max']){
@@ -224,7 +225,8 @@ function search_page(){
 		'top6products'=>$top6products,
 		'main_products'=>$products,
 		'most_viewed'=>$most_viewed,
-		'most_saled'=>$most_saled
+		'most_saled'=>$most_saled,
+		'makes'=>$makes
 	];
 }
 
