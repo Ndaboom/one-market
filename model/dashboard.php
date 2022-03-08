@@ -504,6 +504,20 @@ function add_sous_category(array $d, $shop_id){
 	$i->execute();
 }
 
+function add_make(array $d, $shop_id){
+	global $db;
+	
+	$sql = 'INSERT INTO products_makes(designation, shop_id, state) 
+			VALUES(:designation,:shop_id,:state)';
+	
+	$i = $db->prepare($sql);
+	
+	$i->bindValue(':designation', $d['make_designation']);
+	$i->bindValue(':shop_id', $shop_id);
+	$i->bindValue(':state', $d['status']);
+	$i->execute();
+}
+
 function fetch_category_details($category_id){
 	global $db;
 	$query = "SELECT * FROM product_categories WHERE id= :product_category";
@@ -552,6 +566,15 @@ function fetch_sous_category_details($sc_i){
 	return $data;
 }
 
+function fetch_model_details($m_i){
+	global $db;
+	$query = "SELECT * FROM products_makes WHERE id= :id";
+	$result = $db->prepare($query);
+	$result->execute(['id' => $m_i]);
+	$data = $result->fetch(PDO::FETCH_ASSOC);
+	return $data;
+}
+
 //Fetch most saled products with custom limit
 function fetch_with_price_tri_products($status, $limit,$code){
 	global $db;
@@ -573,6 +596,15 @@ function fetch_with_price_tri_products($status, $limit,$code){
 function fetch_colors($status){
 	global $db;
 	$query = "SELECT * FROM colors_tb WHERE state= :state ";
+	$result = $db->prepare($query);
+	$result->execute(['state'=>$status]);
+	$data = $result->fetchAll(PDO::FETCH_ASSOC);
+	return $data;
+}
+
+function fetch_products_makes($status){
+	global $db;
+	$query = "SELECT * FROM products_makes WHERE state= :state ";
 	$result = $db->prepare($query);
 	$result->execute(['state'=>$status]);
 	$data = $result->fetchAll(PDO::FETCH_ASSOC);

@@ -11,6 +11,7 @@ function home_page()
     $categories = fetch_categories();
     $sous_categories = fetch_sous_categories();
     $todays_products = fetch_todays_product();
+    $products_makes = fetch_products_makes(1);
    
     return [
         'users' => $users,
@@ -21,6 +22,7 @@ function home_page()
         'categories' => $categories,
         'sous_categories' => $sous_categories,
         'todays_products' => $todays_products,
+        'products_makes' => $products_makes,
     ];
 }
 
@@ -35,6 +37,7 @@ function create_operator_page(){
     $operators = fetch_operators();
     $users = fetch_users();
     $products = fetch_all_products();
+    $products_makes = fetch_products_makes(1);
 
     if(isset($_GET['op_i'])){
         $operator = fetch_operator_details($_GET['op_i']);
@@ -49,6 +52,7 @@ function create_operator_page(){
             'operators' => $operators,
             'users' => $users,
             'products' => $products,
+            'products_makes' => $products_makes
         ];
     }else{
         return [
@@ -61,6 +65,7 @@ function create_operator_page(){
             'operators' => $operators,
             'users' => $users,
             'products' => $products,
+            'products_makes' => $products_makes
         ];
     }
 
@@ -177,6 +182,7 @@ function create_user_page(){
     $cities = fetch_cities();
     $product_categories = fetch_categories();
     $sous_categories = fetch_sous_categories();
+    $products_makes = fetch_products_makes(1);
 
     if(isset($_GET['u_i'])){
     $current_user = find("users",$_GET['u_i']);
@@ -188,7 +194,8 @@ function create_user_page(){
             'states' => $states,
             'cities' => $cities,
             'product_categories'=> $product_categories,
-            'sous_categories'=>$sous_categories
+            'sous_categories'=>$sous_categories,
+            'products_makes'=>$products_makes,
         ];
     }else{
         return [
@@ -197,7 +204,8 @@ function create_user_page(){
             'user' => $user,
             'states' => $states,
             'cities' => $cities,
-            'product_categories'=> $product_categories
+            'product_categories'=> $product_categories,
+            'products_makes'=>$products_makes,
         ];
     } 
 }
@@ -223,6 +231,7 @@ function operators_list_page(){
     $products = fetch_products($user['shop_id']);
     $categories = fetch_categories();
     $sous_categories = fetch_sous_categories();
+    $products_makes = fetch_products_makes(1);
     
     return [
 		'countries' => $countries,
@@ -234,6 +243,7 @@ function operators_list_page(){
         'products' => $products,
         'categories' => $categories,
         'sous_categories' => $sous_categories,
+        'products_makes'=>$products_makes
 	];    
 }
 
@@ -247,6 +257,7 @@ function users_list_page(){
     $products = fetch_products($user['shop_id']);
     $categories = fetch_categories();
     $sous_categories = fetch_sous_categories();
+    $products_makes = fetch_products_makes(1);
     
     return [
 		'countries' => $countries,
@@ -257,7 +268,8 @@ function users_list_page(){
         'user' => $user,
         'products' => $products,
         'categories' => $categories,
-        'sous_categories' => $sous_categories
+        'sous_categories' => $sous_categories,
+        'products_makes' => $products_makes
 	];
 }
 
@@ -276,6 +288,7 @@ function create_product_page(){
     $categories = fetch_categories();
     $sous_categories = fetch_sous_categories();
     $colors = fetch_colors(1);
+    $products_makes = fetch_products_makes(1);
    
     return [
         'users' => $users,
@@ -283,7 +296,8 @@ function create_product_page(){
         'user' => $user,
         'product_categories'=> $categories,
         'sous_categories'=>$sous_categories,
-        'colors'=>$colors
+        'colors'=>$colors,
+        'products_makes' => $products_makes
     ];
 }
 
@@ -317,6 +331,7 @@ function aproducts_list_page(){
     $operators = fetch_operators();
     $categories = fetch_categories();
     $sous_categories = fetch_sous_categories();
+    $products_makes = fetch_products_makes(1);
 
     if(isset($_GET['tri'])){
         if($_GET['tri'] == "low_price"){
@@ -333,7 +348,8 @@ function aproducts_list_page(){
         'products' => $products,
         'operators' => $operators,
         'categories' => $categories,
-        'sous_categories' => $sous_categories
+        'sous_categories' => $sous_categories,
+        'products_makes' => $products_makes
     ];
 }
 
@@ -343,6 +359,7 @@ function products_list_page(){
     $user = find("users",$_SESSION['user']['id']);
     $products = fetch_products($user['shop_id']);
     $sous_categories = fetch_sous_categories();
+    $products_makes = fetch_products_makes(1);
 
     if(isset($_GET['tri'])){
         if($_GET['tri'] == "low_price"){
@@ -357,7 +374,8 @@ function products_list_page(){
         'shops' => $shops,
         'user' => $user,
         'products' => $products,
-        'sous_categories' => $sous_categories
+        'sous_categories' => $sous_categories,
+        'products_makes' => $products_makes
     ];
 }
 
@@ -368,6 +386,7 @@ function products_categories_page(){
     $products = fetch_products($user['shop_id']);
     $categories = fetch_categories();
     $sous_categories = fetch_sous_categories();
+    $products_makes = fetch_products_makes(1);
 
     return [
         'users' => $users,
@@ -375,7 +394,8 @@ function products_categories_page(){
         'user' => $user,
         'products' => $products,
         'categories' => $categories,
-        'sous_categories' => $sous_categories
+        'sous_categories' => $sous_categories,
+        'products_makes' => $products_makes
     ];
 }
 
@@ -387,6 +407,7 @@ function aproducts_categories_page(){
     $categories = fetch_categories();
     $sous_categories = fetch_sous_categories();
     $operators = fetch_operators();
+    $products_makes = fetch_products_makes(1);
 
     return [
         'users' => $users,
@@ -395,7 +416,8 @@ function aproducts_categories_page(){
         'products' => $products,
         'categories' => $categories,
         'operators' => $operators,
-        'sous_categories' => $sous_categories
+        'sous_categories' => $sous_categories,
+        'products_makes'=>$products_makes
     ];
 }
 
@@ -408,7 +430,7 @@ function product_page(){
     $operators = fetch_operators();
     $categories = fetch_categories();
     $sous_categories = fetch_sous_categories();
-
+    $products_makes = fetch_products_makes(1);
    
     return [
         'users' => $users,
@@ -418,7 +440,8 @@ function product_page(){
         'product' => $product,
         'operators' => $operators,
         'categories' => $categories,
-        'sous_categories'=> $sous_categories
+        'sous_categories'=> $sous_categories,
+        'products_makes'=>$products_makes
     ];
 }
 
@@ -430,7 +453,7 @@ function edit_product_page(){
     $product = fetch_product_details($_GET['pr_i']);
     $categories = fetch_categories();
     $sous_categories = fetch_sous_categories();
-
+    $products_makes = fetch_products_makes(1);
    
     return [
         'users' => $users,
@@ -440,7 +463,26 @@ function edit_product_page(){
         'product' => $product,
         'categories' => $categories,
         'sous_categories' => $sous_categories,
+        'products_makes' => $products_makes
     ];
+}
+
+function add_make_validation_page(){
+    $user = find("users", $_SESSION['user']['id']);
+
+    if (is_method('POST')) {
+
+        $data = $_POST;
+
+        if($_POST['status'] == "on"){
+            $data['status'] = "1";
+        }else{
+            $data['status'] = "0";
+        }
+
+        add_make($data, $user['shop_id']);
+
+        redirect('dashboard/makes_list');
 }
 
 function edit_product_validation_page(){
@@ -476,7 +518,7 @@ function create_category_page(){
     $categories = fetch_categories();
     $sous_categories = fetch_sous_categories();
     $operators = fetch_operators();
-
+    $products_makes = fetch_products_makes(1);
    
     return [
         'users' => $users,
@@ -485,7 +527,8 @@ function create_category_page(){
         'products' => $products,
         'categories' => $categories,
         'sous_categories' => $sous_categories,
-        'operators' => $operators
+        'operators' => $operators,
+        'products_makes'=>$products_makes
     ]; 
 }
 
@@ -518,7 +561,7 @@ function user_config_page(){
     $categories = fetch_categories();
     $sous_categories = fetch_sous_categories();
     $operators = fetch_operators();
-
+    $products_makes = fetch_products_makes(1);
    
     return [
         'users' => $users,
@@ -528,6 +571,7 @@ function user_config_page(){
         'categories' => $categories,
         'sous_categories' => $sous_categories,
         'operators' => $operators,
+        'products_makes' => $products_makes
     ]; 
 }
 
@@ -539,6 +583,7 @@ function products_sous_categories_page(){
     $categories = fetch_categories();
     $sous_categories = fetch_sous_categories();
     $operators = fetch_operators();
+    $products_makes = fetch_products_makes(1);
    
     return [
         'users' => $users,
@@ -547,7 +592,8 @@ function products_sous_categories_page(){
         'products' => $products,
         'categories' => $categories,
         'sous_categories' => $sous_categories,
-        'operators' => $operators
+        'operators' => $operators,
+        'products_makes' => $products_makes
     ]; 
 }
 
@@ -559,6 +605,7 @@ function create_sous_category_page(){
     $categories = fetch_categories();
     $sous_categories = fetch_sous_categories();
     $operators = fetch_operators();
+    $products_makes = fetch_products_makes(1);
 
     if(isset($_GET['sc_i'])){
         $sous_categorie = fetch_sous_category_details($_GET['sc_i']);
@@ -574,7 +621,8 @@ function create_sous_category_page(){
         'categories' => $categories,
         'sous_categories' => $sous_categories,
         'sous_categorie' => $sous_categorie,
-        'operators' => $operators
+        'operators' => $operators,
+        'products_makes' => $products_makes
     ]; 
 }
 
@@ -645,7 +693,61 @@ function fetch_sous_categories_by_parentid_ajax_page(){
 
     echo $output;
     exit();
+}
 
+function makes_list_page(){
+    $shops = fetch_shops();
+    $countries = fetch_countries();
+    $operators = fetch_operators();
+    $shops = fetch_shops();
+    $users = fetch_users();
+    $user = find("users",$_SESSION['user']['id']);
+    $products = fetch_products($user['shop_id']);
+    $categories = fetch_categories();
+    $sous_categories = fetch_sous_categories();
+    $products_makes = fetch_products_makes(1);
+    
+    return [
+		'countries' => $countries,
+        'shops' => $shops,
+        'operators' => $operators,
+        'users' => $users,
+        'shops' => $shops,
+        'user' => $user,
+        'products' => $products,
+        'categories' => $categories,
+        'sous_categories' => $sous_categories,
+        'products_makes'=>$products_makes
+	];
+}
+
+function create_product_make_page(){
+    $shops = fetch_shops();
+    $users = fetch_users();
+    $user = find("users",$_SESSION['user']['id']);
+    $products = fetch_products($user['shop_id']);
+    $categories = fetch_categories();
+    $sous_categories = fetch_sous_categories();
+    $operators = fetch_operators();
+    $products_makes = fetch_products_makes(1);
+
+    if(isset($_GET['m_i'])){
+        $model_details = fetch_model_details($_GET['m_i']);
+    }else{
+        $model_details = [];
+    }
+   
+    return [
+        'users' => $users,
+        'shops' => $shops,
+        'user' => $user,
+        'products' => $products,
+        'categories' => $categories,
+        'sous_categories' => $sous_categories,
+        'model_details' => $model_details,
+        'operators' => $operators,
+        'products_makes' => $products_makes
+    ];
 }
 
 

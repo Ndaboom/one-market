@@ -1,18 +1,13 @@
 <?php 
-
-    $title = "Créer un produit"
-
+    $title = "Créer un produit";
 ?>
             <!-- ============================================================== -->
             <!-- Start Page Content here -->
             <!-- ============================================================== -->
-
             <div class="content-page">
                 <div class="content">
-
                     <!-- Start Content-->
                     <div class="container-fluid">
-                        
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
@@ -117,22 +112,28 @@
                                                     <div class="row">
                                                         <div class="col-lg-6">
                                                         <div class="mb-3">
-                                                            <label for="product_model" class="form-label">Model du produit</label>
-                                                            <input type="text" id="product_model" name="product_model" class="form-control" placeholder="Model du produit" required>
+                                                            <label for="product_make" class="form-label">Marque du produit</label>
+                                                            <select id="product_make" class="form-control" name="product_make" required>
+                                                            <?php if(count($products_makes) != 0): ?>
+                                                            <?php foreach($products_makes as $make): ?>
+                                                            <option value="<?= $make['id'] ?>"><?= $make['designation'] ?></option>
+                                                            <?php endforeach; ?>
+                                                            <?php else: ?>
+                                                            <option>Aucun marque</option>
+                                                            <?php endif; ?>
+                                                        </select>
                                                         </div>
                                                         </div>
                                                         <div class="col-lg-6">
                                                         <div class="mb-3">
-                                                            <label for="product_make" class="form-label">Marque du produit</label>
-                                                            <input type="text" id="product_make" name="product_make" class="form-control" placeholder="Marque du produit">
+                                                            <label for="product_model" class="form-label">Model du produit</label>
+                                                            <input type="text" id="product_model" name="product_model" class="form-control" placeholder="Model du produit">
                                                         </div>
                                                         </div>
                                                     </div>    
                                             </div> <!-- end col-->
                                         </div>
                                         <!-- end row -->
-
-
                                         <div class="row mt-3">
                                             <div class="col-12 text-center">
                                                 <input type="submit" class="btn btn-success waves-effect waves-light m-1" name="add_product" value="Enregistrer"/>
@@ -145,11 +146,8 @@
                             </div> <!-- end col-->
                         </div>
                         <!-- end row-->
-                        
                     </div> <!-- container -->
-
                 </div> <!-- content -->
-
                 <!-- Footer Start -->
                 <footer class="footer">
                     <div class="container-fluid">
@@ -168,9 +166,7 @@
                     </div>
                 </footer>
                 <!-- end Footer -->
-
             </div>
-
             <!-- ============================================================== -->
             <!-- End Page content -->
             <!-- ============================================================== -->
