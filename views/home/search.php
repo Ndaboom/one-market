@@ -93,7 +93,7 @@
 													<?php foreach($makes as $make): ?>
 														<?php $by_maker = fetch_products_by_maker($make['id']); ?>
 													<li class="check-box">
-														<input type="checkbox" id="checkbox<?= $make['id'] ?>" name="checkbox<?= $make['id'] ?>">
+														<input type="checkbox" class="make_checked" id="checkbox<?= $make['id'] ?>" name="checkbox<?= $make['id'] ?>" data-make_id="<?= $make['id'] ?>">
 														<label for="checkbox<?= $make['id'] ?>"><?= $make['designation'] ?> <span>(<?= count($by_maker) ?>)</span></label>
 													</li>
 													<?php endforeach; ?>
@@ -108,7 +108,7 @@
 										</div><!-- /.widget widget-brands -->
 										<div class="widget widget-color">
 											<div class="widget-title">
-												<h3>Couleur<span></span></h3>
+												<h3>Couleurs<span></span></h3>
 												<div style="height: 2px"></div>
 											</div>
 											<div class="widget-content">
@@ -117,38 +117,15 @@
 												</form>
 												<div style="height: 5px"></div>
 												<ul class="box-checkbox scroll">
+												<?php if(count($colors) != 0): ?>
+													<?php foreach($colors as $color): ?>
+													<?php $this_color = fetch_products_by_color($color['id']); ?>
 													<li class="check-box">
-														<input type="checkbox" id="check1" name="check1">
-														<label for="check1">Black <span>(4)</span></label>
+														<input type="checkbox" data-color_id="<?= $color['id'] ?>" class="color_checked" id="check<?= $color['id'] ?>" name="check<?= $color['id'] ?>">
+														<label for="check<?= $color['id'] ?>"><?= $color['designation'] ?><span>(<?= count($this_color) ?>)</span></label>
 													</li>
-													<li class="check-box">
-														<input type="checkbox" id="check2" name="check2">
-														<label for="check2">Yellow <span>(2)</span></label>
-													</li>
-													<li class="check-box">
-														<input type="checkbox" id="check3" name="check3">
-														<label for="check3">White <span>(2)</span></label>
-													</li>
-													<li class="check-box">
-														<input type="checkbox" id="check4" name="check4">
-														<label for="check4">Blue <span>(2)</span></label>
-													</li>
-													<li class="check-box">
-														<input type="checkbox" id="check5" name="check5">
-														<label for="check5">Red <span>(1)</span></label>
-													</li>
-													<li class="check-box">
-														<input type="checkbox" id="check6" name="check6">
-														<label for="check6">Pink <span>(3)</span></label>
-													</li>
-													<li class="check-box">
-														<input type="checkbox" id="check7" name="check7">
-														<label for="check7">Green <span>(4)</span></label>
-													</li>
-													<li class="check-box">
-														<input type="checkbox" id="check8" name="check8">
-														<label for="check8">Gold <span>(4)</span></label>
-													</li>
+													<?php endforeach; ?>
+												<?php endif; ?>	
 												</ul>
 											</div>
 										</div><!-- /.widget widget-color -->

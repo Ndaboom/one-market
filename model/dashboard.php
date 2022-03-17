@@ -391,6 +391,16 @@ function fetch_products_by_maker($maker_id){
 	return $data;
 }
 
+//Fetch products by color
+function fetch_products_by_color($color_id){
+	global $db;
+	$query = "SELECT * FROM products_tb WHERE product_color= :id";
+	$result = $db->prepare($query);
+	$result->execute(['id' => $color_id]);
+	$data = $result->fetchAll(PDO::FETCH_ASSOC);
+	return $data;
+}
+
 //fetch similar products to
 function fetch_similar_products($product_id,$category_id, $limit){
 	global $db;
@@ -613,7 +623,7 @@ function fetch_model_details($m_i){
 	return $data;
 }
 
-//Fetch most saled products with custom limit
+//Fetch products with tri price 
 function fetch_with_price_tri_products($status, $limit,$code){
 	global $db;
 	$query = '';
@@ -627,6 +637,34 @@ function fetch_with_price_tri_products($status, $limit,$code){
 	
 	$result = $db->prepare($query);
 	$result->execute(['status' => $status]);
+	$data = $result->fetchAll(PDO::FETCH_ASSOC);
+	return $data;
+}
+
+//Fetch 
+function fetch_with_maker_tri_products($status, $limit,$product_make,$color_id,$code){
+	global $db;
+	$query = '';
+	if($code == 0){
+	$query = "SELECT * FROM products_tb WHERE product_status= :status AND product_make= :product_make
+			  ORDER BY product_price ASC LIMIT ".$limit."";
+			  $result = $db->prepare($query);
+			  $result->execute([
+				  'status' => $status,
+				  'product_make' => $product_make
+			  ]);
+	}else if($code == 1){
+		$query = "SELECT * FROM products_tb 
+		WHERE product_status= :status AND product_make= :product_make AND product_color= :product_color
+		ORDER BY product_price ASC LIMIT ".$limit."";
+		$result = $db->prepare($query);
+		$result->execute([
+			'status' => $status,
+			'product_make' => $product_make,
+			'product_color' => $color_id
+		]);
+	}
+	
 	$data = $result->fetchAll(PDO::FETCH_ASSOC);
 	return $data;
 }
@@ -648,6 +686,22 @@ function fetch_products_makes($status){
 	$result->execute();
 	}else{
 	$query = "SELECT * FROM products_makes  WHERE state= :state";
+	$result = $db->prepare($query);
+	$result->execute(['state'=>$status]);
+	}
+	
+	$data = $result->fetchAll(PDO::FETCH_ASSOC);
+	return $data;
+}
+
+function fetch_products_colors($status){
+	global $db;
+	if($status == 3){
+	$query = "SELECT * FROM colors_tb";
+	$result = $db->prepare($query);
+	$result->execute();
+	}else{
+	$query = "SELECT * FROM colors_tb  WHERE state= :state";
 	$result = $db->prepare($query);
 	$result->execute(['state'=>$status]);
 	}

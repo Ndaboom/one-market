@@ -15,11 +15,11 @@
 					<div class="col-md-12">
 						<ul class="breadcrumbs">
 							<li class="trail-item">
-								<a href="#" title="">Home</a>
+								<a href="home/home" title="">Accueil</a>
 								<span><img src="assets/landing/images/icons/arrow-right.png" alt=""></span>
 							</li>
 							<li class="trail-item">
-								<a href="#" title="">Shop</a>
+								<a href="home/shop" title="">Shop</a>
 								<span><img src="assets/landing/images/icons/arrow-right.png" alt=""></span>
 							</li>
 							<li class="trail-end">
@@ -41,181 +41,45 @@
 									<h3>Categories<span></span></h3>
 								</div>
 								<ul class="cat-list style1 widget-content">
+								<?php foreach($categories as $category): ?>
+                                    <?php $products = fetch_products_by_category($category['id']); ?>
 									<li>
-										<span>Accessories<i>(03)</i></span>
+										<span><?= $category['designation'] ?><i>(<?= count($products) ?>)</i></span>
 										<ul class="cat-child">
-											<li>
-												<a href="#" title="">TV</a>
-											</li>
-											<li>
-												<a href="#" title="">Monitors</a>
-											</li>
-											<li>
-												<a href="#" title="">Software</a>
-											</li>
+                                        <?php foreach($products as $product): ?>
+                                            <li>
+                                                <a href="home/product?p_i=<?= $product['id'] ?>" title=""><?= $product['product_name'] ?></a>
+                                            </li>
+                                        <?php endforeach; ?>
 										</ul>
 									</li>
-									<li>
-										<span>Cameras<i>(19)</i></span>
-										<ul class="cat-child">
-											<li>
-												<a href="#" title="">Go Pro</a>
-											</li>
-											<li>
-												<a href="#" title="">Video</a>
-											</li>
-											<li>
-												<a href="#" title="">Software</a>
-											</li>
-										</ul>
-									</li>
-									<li class="">
-										<span>Computers<i>(56)</i></span>
-										<ul class="cat-child">
-											<li>
-												<a href="#" title="">Desktop</a>
-											</li>
-											<li>
-												<a href="#" title="">Monitors</a>
-											</li>
-											<li>
-												<a href="#" title="">Software</a>
-											</li>
-										</ul>
-									</li>
-									<li>
-										<span>Laptops<i>(03)</i></span>
-										<ul class="cat-child">
-											<li>
-												<a href="#" title="">Desktop</a>
-											</li>
-											<li>
-												<a href="#" title="">Monitors</a>
-											</li>
-											<li>
-												<a href="#" title="">Software</a>
-											</li>
-										</ul>
-									</li>
-									<li>
-										<span>Networking<i>(03)</i></span>
-										<ul class="cat-child">
-											<li>
-												<a href="#" title="">Monitors</a>
-											</li>
-											<li>
-												<a href="#" title="">Software</a>
-											</li>
-										</ul>
-									</li>
-									<li>
-										<span>Old Products<i>(89)</i></span>
-										<ul class="cat-child">
-											<li>
-												<a href="#" title="">Monitors</a>
-											</li>
-											<li>
-												<a href="#" title="">Software</a>
-											</li>
-										</ul>
-									</li>
-									<li>
-										<span>Smartphones<i>(90)</i></span>
-										<ul class="cat-child">
-											<li>
-												<a href="#" title="">Apple</a>
-											</li>
-											<li>
-												<a href="#" title="">HTC</a>
-											</li>
-											<li>
-												<a href="#" title="">Sony</a>
-											</li>
-											<li>
-												<a href="#" title="">Samsung</a>
-											</li>
-											<li>
-												<a href="#" title="">LG</a>
-											</li>
-										</ul>
-									</li>
-									<li>
-										<span>Software<i>(23)</i></span>
-										<ul class="cat-child">
-											<li>
-												<a href="#" title="">Desktop</a>
-											</li>
-											<li>
-												<a href="#" title="">Monitors</a>
-											</li>
-											<li>
-												<a href="#" title="">BKAV</a>
-											</li>
-										</ul>
-									</li>
+                                <?php endforeach; ?>
 								</ul><!-- /.cat-list -->
 							</div><!-- /.widget-categories -->
-							<div class="widget widget-price">
-								<div class="widget-title">
-									<h3>Price<span></span></h3>
-								</div>
-								<div class="widget-content">
-									<p>Price</p>
-									<div class="price search-filter-input">
-                                        <div id="slider-range" class="price-slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><div class="ui-slider-range ui-corner-all ui-widget-header" ></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span></div>
-                                        <p class="amount">
-                                          <input type="text" id="amount" disabled="">
-                                        </p>
-                                   </div>
-								</div>
-							</div><!-- /.widget widget-price -->
 							<div class="widget widget-brands">
 								<div class="widget-title">
-									<h3>Brands<span></span></h3>
+									<h3>Marques<span></span></h3>
 								</div>
 								<div class="widget-content">
 									<form action="#" method="get" accept-charset="utf-8">
 										<input type="text" name="brands" placeholder="Brands Search">
 									</form>
 									<ul class="box-checkbox scroll">
+									<?php if(count($makes) != 0): ?>
+                                            <?php foreach($makes as $make): ?>
+                                                <?php $by_maker = fetch_products_by_maker($make['id']); ?>
 										<li class="check-box">
-											<input type="checkbox" id="checkbox1" name="checkbox1">
-											<label for="checkbox1">Apple <span>(4)</span></label>
+											<input type="checkbox" class="make_checked" id="checkbox<?= $make['id'] ?>" name="checkbox<?= $make['id'] ?>" data-make_id="<?= $make['id'] ?>">
+											<label for="checkbox1"><?= $make['designation'] ?> <span>(<?= count($by_maker) ?>)</span></label>
 										</li>
-										<li class="check-box">
-											<input type="checkbox" id="checkbox2" name="checkbox2">
-											<label for="checkbox2">Samsung <span>(2)</span></label>
-										</li>
-										<li class="check-box">
-											<input type="checkbox" id="checkbox3" name="checkbox3">
-											<label for="checkbox3">HTC <span>(2)</span></label>
-										</li>
-										<li class="check-box">
-											<input type="checkbox" id="checkbox4" name="checkbox4">
-											<label for="checkbox4">LG <span>(2)</span></label>
-										</li>
-										<li class="check-box">
-											<input type="checkbox" id="checkbox5" name="checkbox5">
-											<label for="checkbox5">Dell <span>(1)</span></label>
-										</li>
-										<li class="check-box">
-											<input type="checkbox" id="checkbox6" name="checkbox6">
-											<label for="checkbox6">Sony <span>(3)</span></label>
-										</li>
-										<li class="check-box">
-											<input type="checkbox" id="checkbox7" name="checkbox7">
-											<label for="checkbox7">Bphone <span>(4)</span></label>
-										</li>
-										<li class="check-box">
-											<input type="checkbox" id="checkbox8" name="checkbox8">
-											<label for="checkbox8">Oppo <span>(4)</span></label>
-										</li>
+                                            <?php endforeach; ?>
+                                    <?php endif; ?>
 									</ul>
 								</div>
 							</div><!-- /.widget widget-brands -->
 							<div class="widget widget-color">
 								<div class="widget-title">
-									<h3>Color<span></span></h3>
+									<h3>Couleurs<span></span></h3>
 									<div style="height: 2px"></div>
 								</div>
 								<div class="widget-content">
@@ -224,55 +88,34 @@
 									</form>
 									<div style="height: 5px"></div>
 									<ul class="box-checkbox scroll">
+									<?php if(count($colors) != 0): ?>
+                                        <?php foreach($colors as $color): ?>
+                                        <?php $this_color = fetch_products_by_color($color['id']); ?>
 										<li class="check-box">
-											<input type="checkbox" id="check1" name="check1">
-											<label for="check1">Black <span>(4)</span></label>
+											<input type="checkbox" class="color_checked" id="check<?= $color['id'] ?>" name="check<?= $color['id'] ?>">
+											<label for="check<?= $color['id'] ?>"><?= $color['designation'] ?> <span>(<?= count($this_color) ?>)</span></label>
 										</li>
-										<li class="check-box">
-											<input type="checkbox" id="check2" name="check2">
-											<label for="check2">Yellow <span>(2)</span></label>
-										</li>
-										<li class="check-box">
-											<input type="checkbox" id="check3" name="check3">
-											<label for="check3">White <span>(2)</span></label>
-										</li>
-										<li class="check-box">
-											<input type="checkbox" id="check4" name="check4">
-											<label for="check4">Blue <span>(2)</span></label>
-										</li>
-										<li class="check-box">
-											<input type="checkbox" id="check5" name="check5">
-											<label for="check5">Red <span>(1)</span></label>
-										</li>
-										<li class="check-box">
-											<input type="checkbox" id="check6" name="check6">
-											<label for="check6">Pink <span>(3)</span></label>
-										</li>
-										<li class="check-box">
-											<input type="checkbox" id="check7" name="check7">
-											<label for="check7">Green <span>(4)</span></label>
-										</li>
-										<li class="check-box">
-											<input type="checkbox" id="check8" name="check8">
-											<label for="check8">Gold <span>(4)</span></label>
-										</li>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
 									</ul>
 								</div>
 							</div><!-- /.widget widget-color -->
 							<div class="widget widget-products">
 								<div class="widget-title">
-									<h3>Best Seller<span></span></h3>
+									<h3>Plus vues<span></span></h3>
 								</div>
 								<ul class="product-list widget-content">
+									<?php foreach($most_viewed as $row): ?>
+										<?php $product_category = fetch_category_by_id($row['product_category']); ?>
 									<li>
 										<div class="img-product">
-											<a href="#" title="">
-												<img src="assets/landing/images/blog/14.jpg" alt="">
+											<a href="home/product?p_i=<?= $row['id'] ?>" title="">
+												<img src="<?= $row['product_image'] ?>" style="max-width:100px;" alt="">
 											</a>
 										</div>
 										<div class="info-product">
 											<div class="name">
-												<a href="#" title="">Razer RZ02-01071 <br/>500-R3M1</a>
+												<a href="home/product?p_i=<?= $row['id'] ?>" title=""><?= $row['product_name'] ?> <br/><?= $product_category['designation'] ?></a>
 											</div>
 											<div class="queue">
 												<i class="fa fa-star" aria-hidden="true"></i>
@@ -282,58 +125,12 @@
 												<i class="fa fa-star" aria-hidden="true"></i>
 											</div>
 											<div class="price">
-												<span class="sale">$50.00</span>
+												<span class="sale">$<?= $row['product_price'] ?></span>
 												<span class="regular">$2,999.00</span>
 											</div>
 										</div>
 									</li>	
-									<li>
-										<div class="img-product">
-											<a href="#" title="">
-												<img src="assets/landing/images/blog/13.jpg" alt="">
-											</a>
-										</div>
-										<div class="info-product">
-											<div class="name">
-												<a href="#" title="">Notebook Black Spire <br/>V Nitro VN7-591G</a>
-											</div>
-											<div class="queue">
-												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star" aria-hidden="true"></i>
-											</div>
-											<div class="price">
-												<span class="sale">$24.00</span>
-												<span class="regular">$2,999.00</span>
-											</div>
-										</div>
-									</li>
-									<li>
-										
-										<div class="img-product">
-											<a href="#" title="">
-												<img src="assets/landing/images/blog/12.jpg" alt="">
-											</a>
-										</div>
-										<div class="info-product">
-											<div class="name">
-												<a href="#" title="">Apple iPad Mini <br/>G2356</a>
-											</div>
-											<div class="queue">
-												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star" aria-hidden="true"></i>
-											</div>
-											<div class="price">
-												<span class="sale">$90.00</span>
-												<span class="regular">$2,999.00</span>
-											</div>
-										</div>
-									</li>	
+									<?php endforeach; ?>	
 								</ul>
 							</div><!-- /.widget widget-products -->
 							<div class="widget widget-banner">
@@ -378,7 +175,9 @@
 							</div><!-- /.slider -->
 							<div class="wrap-imagebox">
 								<div class="flat-row-title">
-									<h3>Mobile & Tablet</h3>
+									<?php if(isset($_GET['o_i'])): ?>
+									<h3><?= $operator['operator_name'] ?></h3>
+									<?php endif; ?>
 									<span>
 										Showing 1–15 of 20 results
 									</span>
@@ -444,11 +243,11 @@
 														</div>
 													</div><!-- /.box-content -->
 													<div class="box-bottom">
-														<div class="btn-add-cart">
+														<!-- <div class="btn-add-cart">
 															<a href="#" title="">
 																<img src="assets/landing/assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 															</a>
-														</div>
+														</div> -->
 														<div class="compare-wishlist">
 															<a href="#" class="compare" title="">
 																<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -496,11 +295,11 @@
 														<span class="regular">$2,999.00</span>
 														<span class="sale">$1,999.00</span>
 													</div>
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -540,11 +339,11 @@
 														<span class="regular">$2,999.00</span>
 														<span class="sale">$1,999.00</span>
 													</div>
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -584,11 +383,11 @@
 														<span class="regular">$2,999.00</span>
 														<span class="sale">$1,999.00</span>
 													</div>
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -628,11 +427,11 @@
 														<span class="regular">$2,999.00</span>
 														<span class="sale">$1,999.00</span>
 													</div>
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -672,11 +471,11 @@
 														<span class="regular">$2,999.00</span>
 														<span class="sale">$1,999.00</span>
 													</div>
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -702,13 +501,13 @@
 											<img src="assets/landing/images/icons/left-1.png" alt="">Prev Page
 										</a>
 									</li>
-									<li>
+									<li class="active">
 										<a href="#" class="waves-effect" title="">01</a>
 									</li>
 									<li>
 										<a href="#" class="waves-effect" title="">02</a>
 									</li>
-									<li class="active">
+									<li>
 										<a href="#" class="waves-effect" title="">03</a>
 									</li>
 									<li>

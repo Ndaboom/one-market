@@ -13,6 +13,7 @@ return [
 		'products_by_views' => 'products_by_views',
 		'set_popup_to_false' => 'set_popup_to_false',
 		'search'=> 'search',
+		'shop' => 'shop',
 	],
 	'auth' => [
 		'sign_in' => 'sign_in',

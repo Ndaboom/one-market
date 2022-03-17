@@ -33,14 +33,24 @@ function search_by_category_page(){
 	$operators = fetch_operators();
 	$categories = fetch_categories();
 	$top6products = fetch_top6_products(1);
+	$makes = fetch_products_makes(3);
+	$colors = fetch_products_colors(3);
+	$most_viewed = fetch_most_viewed_products(1,3);
+	if(isset($_GET['c_i'])){
 	$products = fetch_products_by_category($_GET['c_i']);
+	}else if(isset($_GET['o_i'])){
+	$products = fetch_products_low_price($_GET['o_i']);
+	$operator = fetch_operator_details($_GET['o_i']);
+	}
 
-	
 	return [
 		'operators'=>$operators,
 		'categories'=>$categories,
 		'top6products'=>$top6products,
-		'products'=>$products
+		'products'=>$products,
+		'makes'=>$makes,
+		'colors'=>$colors,
+		'most_viewed'=>$most_viewed
 	];
 }
 
@@ -209,12 +219,21 @@ function search_page(){
 	$most_viewed = fetch_most_viewed_products(1,8);
 	$most_saled = fetch_most_saled_products(1, 8);
 	$makes = fetch_products_makes(3);
+	$colors = fetch_products_colors(3);
 	if(isset($_GET['tri']) && $_GET['tri'] == "mostviewed" && $_GET['max']){
 	$products = fetch_most_viewed_products(1, $_GET['max']);
 	}else if(isset($_GET['tri']) && $_GET['tri'] == "low_price" && $_GET['max']){
 	$products = fetch_with_price_tri_products(1, $_GET['max'],0);
 	}else if(isset($_GET['tri']) && $_GET['tri'] == "highest_price" && $_GET['max']){
 	$products = fetch_with_price_tri_products(1, $_GET['max'],1);
+	}else if(isset($_GET['tri']) && $_GET['tri'] == "make" && $_GET['max']){
+		$_SESSION['m_i'] = $_GET['m_i'];
+		if(isset($_GET['c_i']) && $_GET['c_i'] != 0){
+		$_SESSION['c_i'] = $_GET['c_i'];
+		$products = fetch_with_maker_tri_products(1,$_GET['max'],$_GET['m_i'],$_GET['c_i'],1);
+		}else{
+		$products = fetch_with_maker_tri_products(1,$_GET['max'],$_GET['m_i'],$_GET['c_i'],0);
+		}	
 	}else{
 	$products = fetch_products_limit(20);
 	}
@@ -226,7 +245,34 @@ function search_page(){
 		'main_products'=>$products,
 		'most_viewed'=>$most_viewed,
 		'most_saled'=>$most_saled,
-		'makes'=>$makes
+		'makes'=>$makes,
+		'colors'=>$colors
+	];
+}
+
+function shop_page(){
+	$operators = fetch_operators();
+	$categories = fetch_categories();
+	$top6products = fetch_top6_products(1);
+	$recent_products = fetch_products_limit(8);
+	$most_viewed = fetch_most_viewed_products(1,8);
+	$most_saled = fetch_most_saled_products(1, 8);
+	$products = fetch_products_limit(20);
+	$makes = fetch_products_makes(3);
+	$colors = fetch_products_colors(3);
+	$disable_event = true;
+	
+	return [
+		'operators'=>$operators,
+		'categories'=>$categories,
+		'top6products'=>$top6products,
+		'recent_products'=>$recent_products,
+		'most_viewed'=>$most_viewed,
+		'most_saled'=>$most_saled,
+		'our_products'=>$products,
+		'makes'=>$makes,
+		'colors' => $colors,
+		'disable_event'=> $disable_event
 	];
 }
 

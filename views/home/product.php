@@ -120,19 +120,19 @@
 											<option value="">White</option>
 										</select>
 									</div> -->
-									<div class="quanlity">
+									<!-- <div class="quanlity">
 										<span class="btn-down"></span>
 										<input type="number" name="number" id="quantity" value="" min="1" max="100" placeholder="Quanlity">
 										<span class="btn-up"></span>
-									</div>
+									</div> -->
 								</div><!-- /.quanlity-box -->
 								<div class="box-cart style2">
-									<div class="btn-add-cart">
+									<!-- <div class="btn-add-cart">
 										<a href="#" title=""><img src="assets/landing/images/icons/add-cart.png" alt="">Ajouter au panier </a>
-									</div>
+									</div> -->
 									<div class="compare-wishlist">
-										<a href="compare.html" class="compare" title=""><img src="assets/landing/images/icons/compare.png" alt="">Comparer</a>
-										<a href="compare.html" class="wishlist" title=""><img src="assets/landing/images/icons/wishlist.png" alt="">Liste des souhaits</a>
+										<a href="home/compare?p_i=<?= $current_product['id'] ?>" class="compare" title=""><img src="assets/landing/images/icons/compare.png" alt="">Comparer</a>
+										<!-- <a href="compare.html" class="wishlist" title=""><img src="assets/landing/images/icons/wishlist.png" alt="">Liste des souhaits</a> -->
 									</div>
 								</div><!-- /.box-cart -->
 								<div class="social-single">

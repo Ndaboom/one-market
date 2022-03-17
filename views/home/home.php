@@ -233,11 +233,11 @@
 										</div>
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
-										<div class="btn-add-cart" data-product_id="<?= $newer_product['id'] ?>" data-product_name="<?= $newer_product['product_name'] ?>">
+										<!-- <div class="btn-add-cart" data-product_id="<?= $newer_product['id'] ?>" data-product_name="<?= $newer_product['product_name'] ?>">
 											<a href="#" title="">
 												<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 											</a>
-										</div>
+										</div> -->
 										<div class="compare-wishlist">
 											<a href="home/compare?p_i=<?= $newer_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -287,11 +287,11 @@
 										</div>
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
-										<div class="btn-add-cart" data-product_id="<?= $newer_product['id'] ?>" data-product_name="<?= $newer_product['product_name'] ?>">
+										<!-- <div class="btn-add-cart" data-product_id="<?= $newer_product['id'] ?>" data-product_name="<?= $newer_product['product_name'] ?>">
 											<a href="#" title="">
 												<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 											</a>
-										</div>
+										</div> -->
 										<div class="compare-wishlist">
 											<a href="home/compare?p_i=<?= $newer_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -341,11 +341,11 @@
 										</div>
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
-										<div class="btn-add-cart" data-product_name="<?= $newer_product['product_name'] ?>" data-product_id="<?= $newer_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_name="<?= $newer_product['product_name'] ?>" data-product_id="<?= $newer_product['id'] ?>">
 											<a href="#" title="">
 												<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 											</a>
-										</div>
+										</div> -->
 										<div class="compare-wishlist">
 											<a href="home/compare?p_i=<?= $newer_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -395,11 +395,11 @@
 										</div>
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
-										<div class="btn-add-cart" data-product_name="<?= $newer_product['product_name'] ?>" data-product_id="<?= $newer_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_name="<?= $newer_product['product_name'] ?>" data-product_id="<?= $newer_product['id'] ?>">
 											<a href="" title="">
 												<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 											</a>
-										</div>
+										</div> -->
 										<div class="compare-wishlist">
 											<a href="home/compare?p_i=<?= $newer_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -451,11 +451,11 @@
 										</div>
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
-										<div class="btn-add-cart" data-product_name="<?= $mviewed_product['product_name'] ?>" data-product_id="<?= $mviewed_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_name="<?= $mviewed_product['product_name'] ?>" data-product_id="<?= $mviewed_product['id'] ?>">
 											<a href="#" title="">
 												<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 											</a>
-										</div>
+										</div> -->
 										<div class="compare-wishlist">
 											<a href="home/compare?p_i=<?= $mviewed_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -505,11 +505,11 @@
 										</div>
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
-										<div class="btn-add-cart" data-product_name="<?= $mviewed_product['product_name'] ?>" data-product_id="<?= $mviewed_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_name="<?= $mviewed_product['product_name'] ?>" data-product_id="<?= $mviewed_product['id'] ?>">
 											<a href="#" title="">
 												<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 											</a>
-										</div>
+										</div> -->
 										<div class="compare-wishlist">
 											<a href="home/compare?p_i=<?= $mviewed_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -559,11 +559,11 @@
 										</div>
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
-										<div class="btn-add-cart" data-product_name="<?= $mviewed_product['product_name'] ?>" data-product_id="<?= $mviewed_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_name="<?= $mviewed_product['product_name'] ?>" data-product_id="<?= $mviewed_product['id'] ?>">
 											<a href="#" title="">
 												<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 											</a>
-										</div>
+										</div> -->
 										<div class="compare-wishlist">
 											<a href="home/compare?p_i=<?= $mviewed_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -613,11 +613,11 @@
 										</div>
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
-										<div class="btn-add-cart" data-product_name="<?= $mviewed_product['product_name'] ?>" data-product_id="<?= $mviewed_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_name="<?= $mviewed_product['product_name'] ?>" data-product_id="<?= $mviewed_product['id'] ?>">
 											<a href="#" title="">
 												<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 											</a>
-										</div>
+										</div> -->
 										<div class="compare-wishlist">
 											<a href="home/compare?p_i=<?= $mviewed_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -669,11 +669,11 @@
 										</div>
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
-										<div class="btn-add-cart" data-product_name="<?= $most_saled_product['product_name'] ?>" data-product_id="<?= $most_saled_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_name="<?= $most_saled_product['product_name'] ?>" data-product_id="<?= $most_saled_product['id'] ?>">
 											<a href="" title="">
 												<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 											</a>
-										</div>
+										</div> -->
 										<div class="compare-wishlist">
 											<a href="home/compare?p_i=<?= $most_saled_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -723,11 +723,11 @@
 										</div>
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
-										<div class="btn-add-cart" data-product_name="<?= $most_saled_product['product_name'] ?>" data-product_id="<?= $most_saled_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_name="<?= $most_saled_product['product_name'] ?>" data-product_id="<?= $most_saled_product['id'] ?>">
 											<a href="" title="">
 												<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 											</a>
-										</div>
+										</div> -->
 										<div class="compare-wishlist">
 											<a href="home/compare?p_i=<?= $most_saled_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -777,11 +777,11 @@
 										</div>
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
-										<div class="btn-add-cart" data-product_name="<?= $most_saled_product['product_name'] ?>" data-product_id="<?= $most_saled_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_name="<?= $most_saled_product['product_name'] ?>" data-product_id="<?= $most_saled_product['id'] ?>">
 											<a href="" title="">
 												<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 											</a>
-										</div>
+										</div> -->
 										<div class="compare-wishlist">
 											<a href="home/compare?p_i=<?= $most_saled_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -831,11 +831,11 @@
 										</div>
 									</div><!-- /.box-content -->
 									<div class="box-bottom">
-										<div class="btn-add-cart" data-product_name="<?= $most_saled_product['product_name'] ?>" data-product_id="<?= $most_saled_product['id'] ?>">
+										<!-- <div class="btn-add-cart" data-product_name="<?= $most_saled_product['product_name'] ?>" data-product_id="<?= $most_saled_product['id'] ?>">
 											<a href="" title="">
 												<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 											</a>
-										</div>
+										</div> -->
 										<div class="compare-wishlist">
 											<a href="home/compare?p_i=<?= $most_saled_product['id'] ?>" class="compare" title="">
 												<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -901,7 +901,7 @@
 												Add to Cart
 											</a>
 										</div>
-									</div><!-- /.box-bottom -->
+									</div> -->
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
 							<?php endforeach; ?>
@@ -942,7 +942,7 @@
 												Add to Cart
 											</a>
 										</div>
-									</div><!-- /.box-bottom -->
+									</div> -->
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
 							<?php endforeach; ?>
@@ -983,7 +983,7 @@
 												Add to Cart
 											</a>
 										</div>
-									</div><!-- /.box-bottom -->
+									</div>/.box-bottom -->
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
 							<?php endforeach; ?>
@@ -1024,7 +1024,7 @@
 												Add to Cart
 											</a>
 										</div>
-									</div><!-- /.box-bottom -->
+									</div>/.box-bottom -->
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
 							<?php endforeach; ?>
@@ -1065,7 +1065,7 @@
 												Add to Cart
 											</a>
 										</div>
-									</div><!-- /.box-bottom -->
+									</div>/.box-bottom -->
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
 							<?php endforeach; ?>
@@ -1106,7 +1106,7 @@
 												Add to Cart
 											</a>
 										</div>
-									</div><!-- /.box-bottom -->
+									</div>/.box-bottom -->
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
 							<?php endforeach; ?>
@@ -1147,7 +1147,7 @@
 												Add to Cart
 											</a>
 										</div>
-									</div><!-- /.box-bottom -->
+									</div>/.box-bottom -->
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
 							<?php endforeach; ?>
@@ -1188,7 +1188,7 @@
 												Add to Cart
 											</a>
 										</div>
-									</div><!-- /.box-bottom -->
+									</div>/.box-bottom -->
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
 							<?php endforeach; ?>
@@ -1646,11 +1646,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="home/compare?p_i=<?= $our_product['id'] ?>" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -1720,11 +1720,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -1758,11 +1758,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -1794,11 +1794,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -1834,11 +1834,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -1870,11 +1870,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -1908,11 +1908,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -1946,11 +1946,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -1982,11 +1982,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -2022,11 +2022,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -2058,11 +2058,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -2096,11 +2096,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -2132,11 +2132,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -2170,11 +2170,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -2210,11 +2210,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -2248,11 +2248,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -2284,11 +2284,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -2322,11 +2322,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -2358,11 +2358,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -2398,11 +2398,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -2434,11 +2434,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -2472,11 +2472,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -2510,11 +2510,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -2546,11 +2546,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -2586,11 +2586,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -2622,11 +2622,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -2660,11 +2660,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -2696,11 +2696,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare
@@ -2734,11 +2734,11 @@
 													</div>
 												</div><!-- /.box-content -->
 												<div class="box-bottom">
-													<div class="btn-add-cart">
+													<!-- <div class="btn-add-cart">
 														<a href="#" title="">
 															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
 														</a>
-													</div>
+													</div> -->
 													<div class="compare-wishlist">
 														<a href="#" class="compare" title="">
 															<img src="assets/landing/images/icons/compare.png" alt="">Compare

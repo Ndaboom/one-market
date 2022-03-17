@@ -28,6 +28,11 @@
 	<script>
 		$(document).ready(function() {
 
+		let color_id = 0;
+		let make_id = 0;
+		let max_records = 12;
+		
+		<?php if(!isset($disable_event)): ?>
 		$(document).on('click','.btn-add-cart', function(e){
 			e.preventDefault();
 			let user_ip = '';
@@ -50,6 +55,7 @@
           	})
 			});
 		});
+		<?php endif; ?>
 
 		//Remove product from cart
 		$(document).on('click','.remove_from_cart', function(e){
@@ -140,12 +146,30 @@
 		});
 
 		$(document).on('change', '#products_record', function(e){
-			let max_records = $(this).children('option:selected').data('max');
+			max_records = $(this).children('option:selected').data('max');
 			if(max_records){
 			<?php if(isset($_GET['tri'])): ?>
 			window.location.href = "home/search?tri=<?= $_GET['tri'] ?>&max="+max_records;
 			<?php endif; ?>	
 			}
+		});
+
+		$(document).on('click', '.color_checked', function(e){
+			<?php if(isset($_SESSION['c_i']) && $_SESSION['c_i'] != 0): ?>
+			color_id = <?= $_SESSION['c_i'] ?>;
+			<?php else: ?> 
+			color_id = $(this).data('color_id');
+			<?php endif; ?>
+			window.location.href = "home/search?tri=make&max="+max_records+"&m_i="+make_id+"&c_i="+color_id;
+		});
+
+		$(document).on('click', '.make_checked', function(e){
+			<?php if(isset($_SESSION['m_i']) && $_SESSION['m_i'] != 0): ?>
+			make_id = <?= $_SESSION['m_i'] ?>;
+			<?php else: ?>
+			make_id = $(this).data('make_id');
+			<?php endif; ?>
+			window.location.href = "home/search?tri=make&max="+max_records+"&m_i="+make_id+"&c_i="+color_id;
 		});
 	});
 		
