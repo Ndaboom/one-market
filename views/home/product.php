@@ -59,12 +59,6 @@
 							      <a href='#' id="zoom2" class='zoom'><img src="<?= $current_product['product_image'] ?>" alt='' width='400' height='300' /></a>
 							      <span>NEW</span>
 							    </li>
-							    <li data-thumb="<?= $current_product['product_image'] ?>">
-							      <a href='#' id="zoom3" class='zoom'><img src="<?= $current_product['product_image'] ?>" alt='' width='400' height='300' /></a>
-							    </li>
-							    <li data-thumb="<?= $current_product['product_image'] ?>">
-							      <a href='#' id="zoom4" class='zoom'><img src="<?= $current_product['product_image'] ?>" alt='' width='400' height='300' /></a>
-							    </li>
 							</ul><!-- /.slides -->
 						</div><!-- /.flexslider -->
 					</div><!-- /.col-md-6 -->

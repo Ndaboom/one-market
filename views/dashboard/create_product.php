@@ -118,8 +118,9 @@
                                                             <?php foreach($products_makes as $make): ?>
                                                             <option value="<?= $make['id'] ?>"><?= $make['designation'] ?></option>
                                                             <?php endforeach; ?>
+                                                            <option value="0">Marque inconnue</option>
                                                             <?php else: ?>
-                                                            <option>Aucun marque</option>
+                                                            <option value="0">Aucune marque</option>
                                                             <?php endif; ?>
                                                         </select>
                                                         </div>

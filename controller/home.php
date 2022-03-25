@@ -187,13 +187,20 @@ function main_search_engine_ajax_page(){
 	if(count($data) != 0){
 		$output = '<ul>';
 		foreach($data as $row){
+		
+		if(!isset($row['product_id'])){
+			$link = '<a href="home/compare?p_i='.$row['id'].'" title="">'.$row['product_name'].'</a>';
+		}else{
+			$link = '<a href="home/compare?p_i='.$row['product_id'].'" title="">'.$row['product_name'].'</a>';
+		}
+		
 		$output .= '<li>
 		<div class="image">
 			<img src="'.$row['product_image'].'" alt="">
 		</div>
 			<div class="info-product">
 				<div class="name">
-					<a href="home/compare?p_i='.$row['id'].'" title="">'.$row['product_name'].'</a>
+					'.$link.'
 				</div>
 				<div class="price">
 					<span class="sale">

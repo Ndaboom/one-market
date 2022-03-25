@@ -496,7 +496,7 @@ function search_for($keyword){
 	$products = $result->fetchAll(PDO::FETCH_ASSOC);
 
 	if(!empty($categorie)){
-		$query = "SELECT * FROM products_tb INNER JOIN product_categories ON products_tb.product_category= product_categories.id 
+		$query = "SELECT products_tb.id AS product_id, product_name, product_description, product_price, product_image FROM products_tb INNER JOIN product_categories ON products_tb.product_category= product_categories.id 
 		WHERE product_category = '".$categorie['id']."'
 		ORDER BY products_tb.product_price ASC";
 		$result = $db->prepare($query);

@@ -900,8 +900,8 @@
 											<a href="#" title="">
 												Add to Cart
 											</a>
-										</div>
-									</div> -->
+										</div>-->
+									</div> 
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
 							<?php endforeach; ?>
@@ -941,8 +941,8 @@
 											<a href="#" title="">
 												Add to Cart
 											</a>
-										</div>
-									</div> -->
+										</div> -->
+									</div>
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
 							<?php endforeach; ?>
@@ -982,8 +982,8 @@
 											<a href="#" title="">
 												Add to Cart
 											</a>
-										</div>
-									</div>/.box-bottom -->
+										</div> -->
+									</div>
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
 							<?php endforeach; ?>
@@ -1023,8 +1023,8 @@
 											<a href="#" title="">
 												Add to Cart
 											</a>
-										</div>
-									</div>/.box-bottom -->
+										</div> -->
+									</div>
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
 							<?php endforeach; ?>
@@ -1064,8 +1064,8 @@
 											<a href="#" title="">
 												Add to Cart
 											</a>
-										</div>
-									</div>/.box-bottom -->
+										</div> -->
+									</div>
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
 							<?php endforeach; ?>
@@ -1105,8 +1105,8 @@
 											<a href="#" title="">
 												Add to Cart
 											</a>
-										</div>
-									</div>/.box-bottom -->
+										</div> -->
+									</div>
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
 							<?php endforeach; ?>
@@ -1146,8 +1146,8 @@
 											<a href="#" title="">
 												Add to Cart
 											</a>
-										</div>
-									</div>/.box-bottom -->
+										</div> -->
+									</div>
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
 							<?php endforeach; ?>
@@ -1187,8 +1187,8 @@
 											<a href="#" title="">
 												Add to Cart
 											</a>
-										</div>
-									</div>/.box-bottom -->
+										</div>  -->
+									</div>
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
 							<?php endforeach; ?>
@@ -1228,7 +1228,7 @@
 											<a href="#" title="">
 												Add to Cart
 											</a>
-										</div>
+										</div> -->
 									</div><!-- /.box-bottom -->
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
@@ -1269,7 +1269,7 @@
 											<a href="#" title="">
 												Add to Cart
 											</a>
-										</div>
+										</div> -->
 									</div><!-- /.box-bottom -->
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
@@ -1310,7 +1310,7 @@
 											<a href="#" title="">
 												Add to Cart
 											</a>
-										</div>
+										</div> -->
 									</div><!-- /.box-bottom -->
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
@@ -1351,7 +1351,7 @@
 											<a href="#" title="">
 												Add to Cart
 											</a>
-										</div>
+										</div> -->
 									</div><!-- /.box-bottom -->
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
@@ -1392,7 +1392,7 @@
 											<a href="#" title="">
 												Add to Cart
 											</a>
-										</div>
+										</div> -->
 									</div><!-- /.box-bottom -->
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
@@ -1433,7 +1433,7 @@
 											<a href="#" title="">
 												Add to Cart
 											</a>
-										</div>
+										</div> -->
 									</div><!-- /.box-bottom -->
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
@@ -1474,7 +1474,7 @@
 											<a href="#" title="">
 												Add to Cart
 											</a>
-										</div>
+										</div> -->
 									</div><!-- /.box-bottom -->
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
@@ -1515,7 +1515,7 @@
 											<a href="#" title="">
 												Add to Cart
 											</a>
-										</div>
+										</div> -->
 									</div><!-- /.box-bottom -->
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
@@ -1556,7 +1556,7 @@
 											<a href="#" title="">
 												Add to Cart
 											</a>
-										</div>
+										</div> -->
 									</div><!-- /.box-bottom -->
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
@@ -1597,8 +1597,8 @@
 											<a href="#" title="">
 												Add to Cart
 											</a>
-										</div>
-									</div>-->
+										</div> -->
+									</div>
 								</div><!-- /.imagebox style1 -->
 							</div><!-- /.product-box style1 -->
 							<?php endforeach; ?>
@@ -1607,1157 +1607,6 @@
 				</div><!-- /.row -->
 			</div><!-- /.container -->
 		</section><!-- /.flat-imagebox style1 -->
-
-		<section class="flat-imagebox style2 background">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="product-wrap">
-							<div class="product-tab style1">
-								<ul class="tab-list">
-									<li class="active">Smartphones</li>
-									<li>Tablets</li>
-									<li>Game Box</li>
-									<li>Accessories</li>
-									<li>Mobiles</li>
-									<li>Computers</li>
-								</ul><!-- /.tab-list -->
-							</div><!-- /.product-tab style1 -->
-							<div class="tab-item">
-								<div class="row">
-									<div class="col-md-6">
-										<div class="product-box">
-											<div class="imagebox style2 v1">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l01.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">HeadPhones</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Beats Solo<br />HD</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,999.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="home/compare?p_i=<?= $our_product['id'] ?>" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-									</div><!-- /.col-md-6 -->
-									<div class="col-md-3 col-sm-6">
-										<div class="product-box style2">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l02.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Laptops</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Apple iPad Mini<br />G2356</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,250.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-										<div class="product-box style2">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l04.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Cameras</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">HTC One M8</a>
-													</div>
-													<div class="price">
-														<span class="sale">$2,009.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-									</div><!-- /.col-md-3 col-sm-6 -->
-									<div class="col-md-3 col-sm-6">
-										<div class="product-box style2">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l03.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Laptops</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Apple iPad Mini<br />G2356</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,250.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-										<div class="product-box style2">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l05.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Computers</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Apple macbook pro Z0SC4824<br />Retina</a>
-													</div>
-													<div class="price">
-														<span class="sale">$5,759.68</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-									</div><!-- /.col-md-3 col-sm-6 -->
-								</div><!-- /.row -->
-								<div class="row">
-									<div class="col-md-3 col-sm-6">
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l03.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Laptops</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Apple iPad Mini<br />G2356</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,250.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l05.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Laptops</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Apple iPad Mini<br />G2356</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,250.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-									</div><!-- /.col-md-3 col-sm-6 -->
-									<div class="col-md-6">
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l01.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Headphones</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Beats Solo<br />HD</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,999.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-									</div><!-- /.col-md-6 -->
-									<div class="col-md-3 col-sm-6">
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l04.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Laptops</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Apple iPad Mini<br />G2356</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,250.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l02.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Laptops</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Apple iPad Mini<br />G2356</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,250.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-									</div><!-- /.col-md-3 col-sm-6 -->
-								</div><!-- /.row -->
-								<div class="row">
-									<div class="col-md-3 col-sm-6">
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l05.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Laptops</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Apple iPad Mini<br />G2356</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,250.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l04.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Laptops</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Apple iPad Mini<br />G2356</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,250.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-									</div><!-- /.col-md-3 col-sm-6 -->
-									<div class="col-md-3 col-sm-6">
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l03.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Laptops</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Apple iPad Mini<br />G2356</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,250.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l02.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Laptops</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Apple iPad Mini<br />G2356</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,250.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-									</div><!-- /.col-md-3 col-sm-6 -->
-									<div class="col-md-6">
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l01.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Headphones</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Beats Solo<br />HD</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,999.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-									</div><!-- /.col-md-6 -->
-								</div><!-- /.row -->
-								<div class="row">
-									<div class="col-md-6">
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l01.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Headphones</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Beats Solo<br />HD</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,999.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-									</div><!-- /.col-md-6 -->
-									<div class="col-md-3 col-sm-6">
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l03.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Laptops</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Apple iPad Mini<br />G2356</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,250.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l04.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Laptops</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Apple iPad Mini<br />G2356</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,250.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-									</div><!-- /.col-md-3 col-sm-6 -->
-									<div class="col-md-3 col-sm-6">
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l02.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Laptops</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Apple iPad Mini<br />G2356</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,250.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l05.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Laptops</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Apple iPad Mini<br />G2356</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,250.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-									</div><!-- /.col-md-3 col-sm-6 -->
-								</div><!-- /.row -->
-								<div class="row">
-									<div class="col-md-3 col-sm-6">
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l03.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Laptops</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Apple iPad Mini<br />G2356</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,250.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l04.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Laptops</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Apple iPad Mini<br />G2356</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,250.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-									</div><!-- /.col-md-3 col-sm-6 -->
-									<div class="col-md-6">
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l01.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Headphones</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Beats Solo<br />HD</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,999.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-									</div><!-- /.col-md-6 -->
-									<div class="col-md-3 col-sm-6">
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l02.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Laptops</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Apple iPad Mini<br />G2356</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,250.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l05.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Laptops</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Apple iPad Mini<br />G2356</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,250.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-									</div><!-- /.col-md-3 col-sm-6 -->
-								</div><!-- /.row -->
-								<div class="row">
-									<div class="col-md-3 col-sm-6">
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l05.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Laptops</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Apple iPad Mini<br />G2356</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,250.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l03.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Laptops</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Apple iPad Mini<br />G2356</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,250.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-									</div><!-- /.col-md-3 col-sm-6 -->
-									<div class="col-md-3 col-sm-6">
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l04.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Laptops</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Apple iPad Mini<br />G2356</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,250.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l02.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Laptops</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Apple iPad Mini<br />G2356</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,250.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-									</div><!-- /.col-md-3 col-sm-6 -->
-									<div class="col-md-6">
-										<div class="product-box">
-											<div class="imagebox style2">
-												<div class="box-image">
-													<a href="#" title="">
-														<img src="assets/landing/images/product/other/l01.jpg" alt="">
-													</a>
-												</div><!-- /.box-image -->
-												<div class="box-content">
-													<div class="cat-name">
-														<a href="#" title="">Headphones</a>
-													</div>
-													<div class="product-name">
-														<a href="#" title="">Beats Solo<br />HD</a>
-													</div>
-													<div class="price">
-														<span class="sale">$1,999.00</span>
-														<span class="regular">$2,999.00</span>
-													</div>
-												</div><!-- /.box-content -->
-												<div class="box-bottom">
-													<!-- <div class="btn-add-cart">
-														<a href="#" title="">
-															<img src="assets/landing/images/icons/add-cart.png" alt="">Add to Cart
-														</a>
-													</div> -->
-													<div class="compare-wishlist">
-														<a href="#" class="compare" title="">
-															<img src="assets/landing/images/icons/compare.png" alt="">Compare
-														</a>
-														<a href="#" class="wishlist" title="">
-															<img src="assets/landing/images/icons/wishlist.png" alt="">Wishlist
-														</a>
-													</div>
-												</div><!-- /.box-bottom -->
-											</div><!-- /.imagebox style2 -->
-										</div><!-- /.product-box -->
-									</div><!-- /.col-md-6 -->
-								</div><!-- /.row -->
-							</div><!-- /.tab-item -->
-						</div><!-- /.product-wrap -->
-					</div><!-- /.col-md-12 -->
-				</div><!-- /.row -->
-			</div><!-- /.container -->
-		</section><!-- /.flat-imagebox style2 -->
 
 		<section class="flat-iconbox">
 			<div class="container">

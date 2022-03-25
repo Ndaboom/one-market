@@ -119,7 +119,7 @@
 										</div><!-- /.all-categories -->
 									</div><!-- /.cat-wrap -->
 									<div class="box-search">
-										<input type="text" name="search" class="main_search_box" placeholder="Rechercher ce que vous cherchez ?">
+										<input type="text" name="search" class="main_search_box" placeholder="Rechercher ce que vous cherchez ?" autocomplete="off">
 										<span class="btn-search">
 											<button type="submit" class="waves-effect"><img src="assets/landing/images/icons/search.png" alt=""></button>
 										</span>
