@@ -42,11 +42,11 @@
 								</div>
 								<ul class="cat-list style1 widget-content">
 								<?php foreach($categories as $category): ?>
-                                    <?php $products = fetch_products_by_category($category['id']); ?>
+                                    <?php $products_by_categories = fetch_products_by_category($category['id']); ?>
 									<li>
-										<span><?= $category['designation'] ?><i>(<?= count($products) ?>)</i></span>
+										<span><?= $category['designation'] ?><i>(<?= count($products_by_categories) ?>)</i></span>
 										<ul class="cat-child">
-                                        <?php foreach($products as $product): ?>
+                                        <?php foreach($products_by_categories as $product): ?>
                                             <li>
                                                 <a href="home/product?p_i=<?= $product['id'] ?>" title=""><?= $product['product_name'] ?></a>
                                             </li>

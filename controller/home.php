@@ -39,7 +39,7 @@ function search_by_category_page(){
 	if(isset($_GET['c_i'])){
 	$products = fetch_products_by_category($_GET['c_i']);
 	}else if(isset($_GET['o_i'])){
-	$products = fetch_products_low_price($_GET['o_i']);
+	$products = verify_existing_data("products_tb", "shop_id", $_GET['o_i']);
 	$operator = fetch_operator_details($_GET['o_i']);
 	}
 

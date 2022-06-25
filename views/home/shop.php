@@ -1,16 +1,12 @@
 <body class="header_sticky">
 	<div class="boxed">
-
 		<div class="overlay"></div>
-
         <?php 
 		if(!isset($_SESSION['news_popup'])){
 			include('views/partials/popup.php'); 
 		}
 		?>
-
 		<?php include('views/partials/header.php'); ?>
-
 		<section class="flat-breadcrumb">
 			<div class="container">
 				<div class="row">
@@ -29,7 +25,6 @@
 				</div><!-- /.row -->
 			</div><!-- /.container -->
 		</section><!-- /.flat-breadcrumb -->
-
 		<main id="shop">
 			<div class="container">
 				<div class="row">
