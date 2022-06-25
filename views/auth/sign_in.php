@@ -9,7 +9,6 @@
     <div class="auth-fluid-form-box">
         <div class="align-items-center d-flex h-100">
             <div class="card-body">
-
                 <!-- Logo -->
                 <div class="auth-brand text-center text-lg-start">
                     <div class="auth-logo">

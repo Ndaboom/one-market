@@ -10,6 +10,7 @@ function sign_in_page()
 
 function sign_in_validation_page()
 {
+    $error = '';
     if (is_method('POST')) {
         var_dump($_POST);
         $user = login('users', $_POST['email'], $_POST['password']);
@@ -17,15 +18,14 @@ function sign_in_validation_page()
             set_session('user', $user);
             redirect('dashboard/home');
         }else{
-            echo "Not found";
-            exit();
+            $error = "Mot de passe/username incorrect";
             redirect('auth/sign_in');
         }
 
     }
 
 	return [
-        'message' => 'Inscription echoué'
+        'message' => $error,
     ];
 }
 
@@ -38,12 +38,9 @@ function sign_up_validation_page(){
             set_session('user', $user);
             redirect('dashboard/home');
         }else{
-            echo "Not found";
-            exit();
+            echo "Registration failed";
             redirect('auth/sign_in');
         }
-
-
     }
 }
 
