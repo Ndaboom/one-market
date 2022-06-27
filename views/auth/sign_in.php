@@ -40,8 +40,15 @@
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane show active" id="tab-login">
+                        <?php if(get_session('error')){
+                         ?>
+                            <div class="alert alert-danger" role="alert">
+                                <i class="mdi mdi-block-helper me-2"></i><?= get_session('error') ?>
+                            </div>
+                         <?php  
+                         unset($_SESSION['error']);
+                        }?>
                         <p class="text-muted mb-3">Saisissez votre adresse e-mail et votre mot de passe pour accéder à votre compte.</p>
-
                         <!-- form -->
                         <form method="post" action="auth/sign_in_validation">
                             <div class="mb-3">
@@ -91,6 +98,14 @@
 
                     </div>
                     <div class="tab-pane" id="tab-signup">
+                    <?php if(get_session('r_error')){
+                         ?>
+                        <div class="alert alert-danger" role="alert">
+                            <i class="mdi mdi-block-helper me-2"></i><?= get_session('r_error') ?>
+                        </div>
+                        <?php  
+                        unset($_SESSION['r_error']);
+                    }?>
                         <p class="text-muted mb-3">Vous n'avez pas de compte ? Créez votre compte, cela prend moins d'une minute.</p>
 
                         <!-- form -->
@@ -120,10 +135,6 @@
                             <div class="mb-3">
                                 <label for="password" class="form-label">Mot de passe</label>
                                 <input class="form-control" type="password" required id="password" name="password" placeholder="Entrer votre mot de passe">
-                            </div>
-                            <div class="mb-3">
-                                <label for="password_conf" class="form-label">Re-entrer votre mot de passe</label>
-                                <input class="form-control" type="password" required id="password_conf" name="password_conf" placeholder="Confirmer votre mot de passe">
                             </div>
                             <div class="mb-3">
                                 <div class="form-check">

@@ -46,18 +46,18 @@ function login($table, $username, $password)
 	return $q->fetch(\PDO::FETCH_ASSOC);
 }
 
-function register($table, $fullname, $telephone, $birth_date, $emailadress, $password)
+function register($table, $data)
 {
 	global $db;
 	
 	$q=$db->prepare('INSERT INTO users(username,phone_number,birth_date,email,password)
 	                 VALUES(:username,:phone_number,:birth_date,:email,:password)');
 	$q->execute([
-	'username'=> $fullname,
-	'phone_number'=>$telephone,
-	'birth_date'=>$birth_date,
-	'email'=>$emailadress,
-	'password'=>$password
+	'username'=> $data['fullname'],
+	'phone_number'=>$data['telephone'],
+	'birth_date'=>$data['birth_date'],
+	'email'=>$data['emailadress'],
+	'password'=>$data['password']
 	]);
 
 	$last_id = $db->lastInsertId();

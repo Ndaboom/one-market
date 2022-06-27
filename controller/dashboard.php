@@ -111,16 +111,11 @@ function add_operator_page(){
 		$photo = save_file($_FILES['file'], $path);
 		
 		if (is_string($photo)) {
-
 			$data['operator_logo'] = ltrim($path, '/') . '/' . $photo;
-	
 	        insert_operator($data);
-
             redirect('dashboard/operators_list');
-
         }
     }
-
 }
 
 function edit_operator_page(){
@@ -134,19 +129,13 @@ function edit_operator_page(){
             $photo = save_file($_FILES['file'], $path);
             //image update
             if (is_string($photo)) {
-
                 $data['operator_logo'] = ltrim($path, '/') . '/' . $photo;
                 update_operator_logo($data, $_GET['op_i']);
-
             }
-        }
-		    
+        }    
 	        update_operator($data, $_GET['op_i']);
-
             redirect('dashboard/operators_list');
-
     }
-
 }
 
 function edit_user_page(){
@@ -154,17 +143,12 @@ function edit_user_page(){
     if (is_method('POST')) {
 
         $data = $_POST;	
-
         if(!empty($data['password'])){
             update_user_password($data, $_GET['u_i']);
         }
-
         update_user($data, $_GET['u_i']);
-
         redirect('dashboard/users_list');
-
     }
-
 }
 
 function change_operator_status_page(){
