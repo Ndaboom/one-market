@@ -11,7 +11,7 @@ function sign_in_page()
 function sign_in_validation_page()
 {
     if (is_method('POST')) {
-        var_dump($_POST);
+        
         $user = login('users', $_POST['email'], $_POST['password']);
         if($user){
             set_session('user', $user);
@@ -29,7 +29,6 @@ function sign_in_validation_page()
 
 function sign_up_validation_page(){
     if (is_method('POST')) {
-        var_dump($_POST);
 
         foreach ($_POST as $key => $value) {
             if (empty($value)) {
